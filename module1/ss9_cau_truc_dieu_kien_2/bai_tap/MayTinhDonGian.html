@@ -2,9 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<table>
+    <tr>
+        <th colspan="4"><input id="win"></th>
+    </tr>
+    <tr>
+        <th>
+            <button name="("onclick="nhap('(')"> (</button>
+        </th>
+        <th>
+            <button name=")"onclick="nhap(')')"> )</button>
+        </th>
+        <th>
+            <button name="%"onclick="nhap('%')"> %</button>
+        </th>
+        <th>
+            <button name="AC" onclick="nhap('AC')"> AC</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button name="7"onclick="nhap(7)"> 7</button>
+        </th>
+        <th>
+            <button name="8"onclick="nhap(8)"> 8</button>
+        </th>
+        <th>
+            <button name="9" onclick="nhap(9)"> 9</button>
+        </th>
+        <th>
+            <button name="/"onclick="nhap('/')"> /</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button name="4"onclick="nhap(4)"> 4</button>
+        </th>
+        <th>
+            <button name="5" onclick="nhap(5)"> 5</button>
+        </th>
+        <th>
+            <button name="6" onclick="nhap(6)"> 6</button>
+        </th>
+        <th>
+            <button name="*" onclick="nhap('*')"> *</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button value="1" onclick="nhap(this.value)"> 1</button>
+        </th>
+        <th>
+            <button value="2" onclick="nhap(2)"> 2</button>
+        </th>
+        <th>
+            <button  value="3" onclick="nhap(3)"> 3</button>
+        </th>
+        <th>
+            <button name="-"onclick="nhap('-')"> -</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button value="0" onclick="nhap(this.value)"> (</button>
+        </th>
+        <th>
+            <button value="." onclick="nhap(this.value)"> )</button>;
+        </th>
+        <th>
+            <button value="=" onclick="bang()"> =</button>
+        </th>
+        <th>
+            <button value="+" onclick="nhap(this.value)"> +</button>
+        </th>
+    </tr>
+</table>
+</body>
+<script>
+    function nhap(num) {
+
+        document.getElementById("win").value =document.getElementById("win").value+num;
+    }
+    function bang() {
+        let st=document.getElementById("win").value;
+        document.getElementById("win").value=eval(st);
+    }
+
 </body>
 </html>

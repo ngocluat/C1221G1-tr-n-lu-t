@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title> Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</title>
 </head>
 <body>
-$END$
+<script>
+let tuoi = parseInt(prompt('kiểm tra tuổi của bạn'));
+if ( tuoi < 0){
+    document.write('bạn nhập sai tuổi rồi kìa' );
+}
+else if (tuoi < 120){
+    document.write('tuổi của bạn là '+ tuoi);
+}
+else {
+    document.write('số tuổi của bạn có vẻ hơi lớn r  ');
+}
+</script>
 </body>
 </html>
