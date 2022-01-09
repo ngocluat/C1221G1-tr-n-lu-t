@@ -14,20 +14,21 @@
 <!-- trên 20 tr thì nập 30% thuế-->
 
 
+
 <script>
-let thue = parseInt(prompt('nhập số tiền lương của bạn'));
-if (thue <5000000 ){
-    document.write('bạn phai nộp 5% thuế là : ' + thue*  +'đồng');
+let luong = parseInt(prompt('nhập số tiền lương của bạn'));
+if (luong <5000000 ){
+    document.write('bạn phai nộp 5% thuế là : ' + luong*  +'đồng');
 }
-else if (thue < 10000000 ){
-    document.write('bạn phai nộp 10% thuế là : ' + thue* 10/100 +'đồng');
+else if (luong < 10000000 ){
+    document.write('bạn phai nộp 10% thuế là : ' + luong* 10/100 +'đồng');
 }
-else if (thue < 15000000 ){
-    document.write('bạn phai nộp 15% thuế là : ' + thue* 15 /100 +'đồng');
-}else if (thue < 20000000 ){
-    document.write('bạn phai nộp 20% thuế là : ' + thue* 20 /100 +'đồng');
+else if (luong < 15000000 ){
+    document.write('bạn phai nộp 15% thuế là : ' + luong* 15 /100 +'đồng');
+}else if (luong < 20000000 ){
+    document.write('bạn phai nộp 20% thuế là : ' + luong* 20 /100 +'đồng');
 }else {
-    document.write(' bạn phải nộp thế là '  + thue* 30 /100 +'đồng');
+    document.write(' bạn phải nộp thế là '  + luong* 30 /100 +'đồng');
 }
 </script>
 
