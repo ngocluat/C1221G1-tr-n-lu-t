@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- in ra dãy số fibonnacci-->
+<script>
+    let soDau = 0;
+    let soCuoi = 1;
+    let soFibonacci = parseInt(prompt('bạn muốn hiể thị bao nhiêu số Fibonacci'));
+    for (let i = 0; i <= soFibonacci; i++) {
+        if (i <= 1) {
+            soFibonacci = i;
+        } else {
+            soFibonacci = soDau + soCuoi;
+            soDau = soCuoi;
+            soCuoi = soFibonacci;
+        }
+    }
+    document.write(soFibonacci);
+    document.write('<br>');
+
+
+</script>
+</body>
+</html>

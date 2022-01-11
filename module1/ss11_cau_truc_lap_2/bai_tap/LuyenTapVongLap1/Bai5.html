@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Tính tổng của 20 số đầu tiên trong dãy fibonacci.-->
+
+
+<script>
+
+    let soDau = 0;
+    let soCuoi = 1;
+    let soFibonnacci;
+    let sum = 0;
+    for (i = 0; i <= 9; i++) {
+        if (i <= 1) {
+            soFibonnacci = i;
+
+        } else {
+            soFibonnacci = soDau + soCuoi;
+            soDau = soCuoi;
+            soCuoi = soFibonnacci;
+        }
+        document.write(soFibonnacci);
+        document.write('<br>');
+        sum = sum + soFibonnacci;
+
+    }
+    document.write(sum)
+
+
+</script>
 </body>
 </html>

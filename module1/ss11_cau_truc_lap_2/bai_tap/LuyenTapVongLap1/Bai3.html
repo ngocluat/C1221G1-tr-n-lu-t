@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.-->
+
+<!--Dãy Fibonacci là dãy vô hạn các số tự nhiên bắt đầu bằng hai phần tử 0 và 1 hoặc 1 và 1,
+các phần tử sau đó được thiết lập theo quy tắc mỗi phần tử luôn bằng tổng hai phần tử trước nó.-->
+
+
+<script>
+    let soDau = 0;
+    let soCuoi = 1;
+    let soFibonaci = 0;
+    for (let i = 0; i<20; i++){
+
+        if (i<=1){
+            soFibonaci = i;
+        }
+        else {
+            soFibonaci = soDau + soCuoi;
+            soDau = soCuoi;
+            soCuoi = soFibonaci;
+        }
+
+        document.write(soFibonaci);
+        document.write("<br>");
+    }
+</script>
 </body>
 </html>
