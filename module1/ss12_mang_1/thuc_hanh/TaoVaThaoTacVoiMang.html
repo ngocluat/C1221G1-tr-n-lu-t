@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> sample screen </h1>
+<input type="text" name="nhap" id="txt">
+<button value="add" id="add" onclick="mot">add</button>
+<button value="display" id="display" onclick="hai">display</button>
+<script>
+    let x = 0;
+    let array = array();
+
+    function mot() {
+        array[x] = document.getElementById('txt').value;
+        alert("element: " + array[x] + "adđe at index" + x);
+        x++;
+        document.getElementById("txt").value = "";
+    }
+
+    function hai() {
+        let e = '<hr>';
+        for (let i = 0; i < array.length; i++) {
+            e += "element" + i + '=' + array[i] + "<br>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+
+</script>
+</body>
+</html>
