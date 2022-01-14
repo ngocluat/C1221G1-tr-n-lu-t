@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--: Viết một chương trình để nhập lương nhân viên, tính thuế thu nhập và lương ròng
+(số tiền lương thực sự mà nhân viên đó nhận được).
+ Với các thông số giả sử như sau(không theo luật lương, chỉ là con số giả sử để dễ tính toán):
+20% thuế thu nhập nếu lương là 15 triệu.
+10% thuế thu nhập nếu lương từ 7 đến 15 triệu.
+5% thuế thu nhập nếu lương dưới 7 triệu
+-->
+
+<script>
+    let luong = parseInt(prompt(' nhập số tiền lương mà bạn kiếm được trong tháng'));
+
+    if (luong > 15000000) {
+        let thue1 = luong * 20 / 100;
+        alert('số tiền thuế bạn phải nộp là ' + thue1);
+    } else if (luong > 7000000) {
+        let thue2 = luong * 10 / 100;
+        alert('số tiền thuế bạn phải nộp là ' + thue2);
+    } else if (luong <7000000){
+        let thue3 = luong * 5 / 100;
+        alert('số tiền thuế bạn phải nộp là ' + thue3);
+    }
+else {
+    document.write('lỗi chương trình ')
+    }
+
+</script>
+
+
+</body>
+</html>

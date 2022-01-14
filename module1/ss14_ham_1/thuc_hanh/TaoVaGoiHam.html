@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function hienThi(answer) {
+        let result = '';
+        if (answer) {
+            result = "thoong minh ! chung ta sẽ chơi 1 ván chess hay";
+        } else {
+            result = "có lẻ sau đó ;"
+        }
+        return result;
+    }
+let xatNhan = confirm(" shall we play game ")
+    let theAnswer = hienThi(xatNhan)
+alert(theAnswer)
+</script>
+</body>
+</html>
