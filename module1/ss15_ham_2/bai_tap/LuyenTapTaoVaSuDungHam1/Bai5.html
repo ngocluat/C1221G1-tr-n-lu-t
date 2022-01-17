@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
+<!--Trong hàm này, duyệt qua mảng thứ nhất để tìm tên ngôi sao. Nếu tìm thấy,
+trả lại giá trị tương ứng với chỉ số đó ở mảng thứ hai. Nói cách khác,
+trả lại tên chòm sao của ngôi sao đó. Trong phần <body> của trang web
+, dùng hộp thoại prompt để người dùng nhập vào tên của ngôi sao,
+sau đó gọi hàm với thông tin đầu vào.
+ Đừng quên xử lý trong trường hợp không tìm thấy ngôi sao nào. Cho kết quả hiển thị trên màn hình.-->
+<script>
+    let arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arr2 = ['Ursa', 'Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa', 'Major', 'Leo'];
 
+    function tim(ngoiSao) {
+        let a = arr1.indexOf(ngoiSao);
+        if (a > -1) {
+            let b = arr2[a];
+            document.write('tìm thấy chòm sao cua ngôi sao là'+b);
+        } else {
+            alert(' không tìm thấy ');
+        }
+    }
+
+    tim(prompt('nhập ngôi sao'));
+</script>
 </body>
 </html>

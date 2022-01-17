@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Viết hàm nhận vào một số,
+ kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true,
+  ngược lại trả về false.-->
+
+<script>
+    let flag = true;
+
+    function kiemTra(a) {
+        if (a >= 0) {
+            flag = true;
+        } else {
+            flag = false;
+        }
+    }
+
+    kiemTra(parseInt(prompt(' nhập vào số bất kì ')));
+    if (flag == true) {
+        alert(' là số nguyên dương');
+    } else {
+        alert(' là số nguyên âm');
+    }
+
+
+</script>
+
+
+</body>
+</html>
