@@ -6,7 +6,7 @@
 </head>
 <body>
 <input type="text" id="nhap" placeholder="Nhập tên sản phẩm">
-<input type="button" value="Add New Product" onclick="addNewProduct()"><br>
+<input type="button" value="Add New Product" onclick="themSamPham()"><br>
 <span> Số lượng sản phẩm : </span> <span id="soLuong"></span>
 <p id="display"></p>
 <script>
@@ -15,20 +15,20 @@
     // + Read : hiện thị
     // + Update: Chỉnh sửa thông tin
     // + Delete: Xóa
-    let listProduct = ["Sam Sung", "Nokia", "Iphone"];
+    let lietKeSanPham = ["Sam Sung", "Nokia", "Iphone"];
 
-    display(listProduct);
+    display(lietKeSanPham);
 
-    function addNewProduct() {
+    function themSamPham() {
         let newName = document.getElementById("nhap").value;
         if (newName!=""){
-            listProduct.push(newName);
+            lietKeSanPham.push(newName);
         }else {
             alert("Cần nhập tên sản phẩm")
         }
 
         document.getElementById("nhap").value="";
-        display(listProduct);
+        display(lietKeSanPham);
 
     }
     function display(list) {
@@ -52,21 +52,21 @@
         document.getElementById("soLuong").innerText = list.length;
     }
     function deleteProduct(index) {
-        let conf= confirm("Bạn có muốn xóa sản phẩm "+listProduct[index]);
+        let conf= confirm("Bạn có muốn xóa sản phẩm "+lietKeSanPham[index]);
         if (conf){
-            listProduct.splice(index,1); // xóa 1 sp tại vì trí index
+            lietKeSanPham.splice(index,1); // xóa 1 sp tại vì trí index
         }else {
             alert("Bạn đã không xóa ");
         }
 
-        display(listProduct);
+        display(lietKeSanPham);
     }
     function editProduct(index) {
         let editName = prompt("Nhập tên bạn muốn sửa: ");
         if (editName!=null && editName!=""){ //null =>ok
-            listProduct[index] =editName;
+            lietKeSanPham[index] =editName;
         }
-        display(listProduct);
+        display(lietKeSanPham);
 
     }
 </script>

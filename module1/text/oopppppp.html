@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Đối tượng gồm nhữn gì? gồm thuộc tính + hanhvi (phương thức /hàm)
+    // muốn tạo đối tượng
+    // tạo trực tiếp
+    // let student1 = {
+    //     name: "chánh",
+    //     address: "DN",
+    //     study(){
+    //         alert("đang học môn gì đó");
+    //     }
+    // }
+    // alert(student1.name);
+    // alert(student1.address);
+    // student1.study();
+    // class là một khuôn mẫu quy đinh các thuộc tính + method cho nhóm đối tượng
+    // class Student{
+    //     constructor(ten,diaChi) {  // là 1 method đặc biêt => định nghĩa thuộc tính + tạo đối tượng
+    //         this.name =ten;
+    //         this.address = diaChi;
+    //     }
+    //     study(){
+    //         alert("đang học môn gì đó")
+    //     }
+    // }
+    // let student1 = new Student("chánh1","Dn");
+    // let student2 = new Student("chánh2", "QN");
+    // let student3 = new Student("chánh2", "QN");
+    // let student4 = new Student("chánh2", "QN");
+
+    class MyDate{
+        constructor(day,month,year) {
+            this.day = day;
+            this.month=month;
+            this.year = year;
+        }
+        // getter và setter
+        //+ setter => thay đổi giá trị thuộc tính
+        setDay(day){
+            this.day =day;
+        }
+        getDay(){
+            return this.day;
+        }
+        setDate(day,month,year){
+            this.day = day;
+            this.month=month;
+            this.year = year;
+        }
+        toString(){ // biểu diễn thông tin của đối tươợn dạng chuỗi
+            return  this.day +"/"+ this.month+"/"+this.year
+        }
+
+    }
+    let date1 = new MyDate(1,2,2022);
+    let date2 = new MyDate(1,2,2022);
+    console.log(date1.day +"/"+ date1.month+"/"+date1.year)
+    // date1.day =2;
+    // date1.year =2021;
+    date1.setDay(2);
+    date1.setDate(3,3,2023)
+    console.log(date1.toString())
+    // tính báo đóng (đóng gói) => không được phép truy cập trực tiếp vào thuộc tính
+</script>
+</body>
+</html>

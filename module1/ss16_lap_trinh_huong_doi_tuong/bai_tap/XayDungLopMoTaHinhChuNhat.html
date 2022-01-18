@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="DemoCanvas" width="500" height="600"></canvas>
+</body>
+
+<script>
+    class XayDungLopMoTaHinhChuNhat {
+        constructor(chieuDai, chieuRong) {
+            this.chieudai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+
+        dienTich() {
+            let dienTich = this.chieudai * this.chieuRong;
+            return dienTich;
+        }
+    }
+
+    let a = new XayDungLopMoTaHinhChuNhat(10, 5);
+    document.write("diên tích hình chư nhật là " + a.dienTich());
+
+
+</script>
+</html>

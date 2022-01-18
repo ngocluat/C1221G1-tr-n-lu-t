@@ -7,10 +7,29 @@
 <body>
 <script>
 
-    function hien(){
-alert('xin chòe')
-    }
-    hien()
+   class TenClass {
+       constructor(ten , tuoi) {
+           this.ten = ten
+           this.tuoi=tuoi
+       }
+hanhDong1 (){
+console.log("đang học bài ")
+}
+getTen(){
+           return this.ten
+}
+
+setTen(newTen){
+           this.ten=newTen
+}
+   }
+let a = new TenClass("luật",18)
+
+   a.setTen("trần")
+   console.log(a.getTen(2))
+
+console.log(a)
+
 
 
 </script>
