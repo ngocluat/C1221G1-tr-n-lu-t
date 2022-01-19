@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class CongTac {
+        constructor(trangThai, lamp) {
+            this.trangThai = trangThai;
+            this.lamp = lamp;
+        }
+
+        connectToLamp(electriclamp) {
+            if (this.trangThai) {
+                alert("bong den sang");
+            } else {
+                alert("bong den tat");
+            }
+        }
+
+        switchOff() {
+            this.trangThai = true;
+        }
+
+        switchOn() {
+            this.trangThai = false;
+        }
+    }
+
+    class ElectricLamp {
+        constructor(startus) {
+            this.startus = startus;
+        }
+
+        turnOn() {
+            this.startus = true;
+        }
+
+        turnOff() {
+            this.startus = false;
+        }
+        light() {
+            if (this.startus) {
+                alert("bóng den sáng");
+            } else {
+                alert("bóng đèn tắt");
+            }
+        }
+    }
+
+ let congTac=new ElectricLamp(100);
+  congTac.turnOn()
+congTac.light()
+
+</script>
+</body>
+</html>

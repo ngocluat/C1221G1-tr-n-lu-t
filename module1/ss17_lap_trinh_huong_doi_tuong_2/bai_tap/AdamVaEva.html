@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    class Appple {
+        constructor() {
+            this.khoiLuong = 10;
+        }
+
+        giam() {
+            this.khoiLuong--;
+        }
+
+        isEmpty() {
+            if (this.khoiLuong == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getWeight() {
+            return this.khoiLuong;
+        }
+        setWeight(khoiLuongMoi){
+            this.khoiLuong=khoiLuongMoi
+        }
+    }
+
+    class Human {
+        constructor(ten, gioiTinh, canNang,) {
+            this.ten = ten;
+            this.gioiTinh = gioiTinh;
+            this.canNang = canNang;
+
+        }
+
+        noi(text) {
+            console.log(text);
+        }
+
+        anTao(tao) {
+            if (!tao.isEmpty()) {
+                this.canNang++;
+                tao.giam();
+            }
+
+        }
+
+        checkApple(tao) {
+            if (tao.khoiLuong != 0) {
+                alert("quả táo còn");
+
+            } else {
+                alert("quả táo đẵ an hets");
+            }
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        setTen(newTen) {
+            this.ten = newTen;
+        }
+
+    }
+
+    let a = new Human("Adam", "nam", 60);
+    let b =new Appple()
+    console.log(a);
+    //lấy tên ra là Adam
+    console.log(a.getTen());
+    //     sửa lại tên
+ a.setTen("luật");
+    console.log(a.getTen())
+//    lấy ra trọng jkuowngj
+    console.log(b.getWeight())
+// sửa lại khối lưluowo
+    b.setWeight(1000)
+    console.log(b.getWeight())
+
+
+</script>
+</body>
+</html>

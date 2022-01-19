@@ -14,8 +14,8 @@
         this.radius = radius;
     }
     function createCircle(){
-        var ctx = document.getElementById("myCanvas").getContext("2d");
-        var circle= new Circle(500, 500, 80);
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+        let circle= new Circle(500, 500, 80);
         ctx.beginPath();
         ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
         ctx.fill();
