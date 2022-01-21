@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Cho mảng a chỉ chứa các số nguyên
+Xây dựng mảng b là prefix sums của mảng a cụ thể theo công thức:
+
+Ví dụ: Cho a = [1, 2, 3], thì kết quả prefixSums(a) = [1, 3, 6].
+Mảng b được tạo ra: [1, 1 + 2, 1 + 2 + 3] = [1, 3, 6]
+-->
+<script>
+
+    let sum = 0;
+    let pxSum = [];
+    let a = [1, 2, 3, 4, 5];
+
+    for (let i = 0; i < a.length; i++) {
+        sum += a[i];
+        pxSum.push(sum);
+    }
+    document.write(pxSum);
+
+    // function fillPrefixSum(){
+    //
+    //     prefixSum[0] = arr[0];
+    //     for (let i = 1; i < n; ++i)
+    //         prefixSum[i] = prefixSum[i - 1] + arr[i];
+    // }
+    //
+    // let arr = [ 10, 4, 16, 20,22,1 ];
+    // let n = arr.length;
+    // let prefixSum = new Array(n);
+    //
+    // fillPrefixSum();
+    //
+    // for (let i = 0; i < n; i++)
+    //     document.write(prefixSum[i] + " ");
+    // document.write("");
+
+</script>
+</body>
+</html>

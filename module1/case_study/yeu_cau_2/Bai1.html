@@ -17,17 +17,19 @@
     let luong = parseInt(prompt(' nhập số tiền lương mà bạn kiếm được trong tháng'));
 
     if (luong > 15000000) {
+        alert("thuế cảu bạn là 20%");
         let thue1 = luong * 20 / 100;
         alert('số tiền thuế bạn phải nộp là ' + thue1);
     } else if (luong > 7000000) {
+        alert("thuế cảu bạn là 10%");
         let thue2 = luong * 10 / 100;
         alert('số tiền thuế bạn phải nộp là ' + thue2);
-    } else if (luong <7000000){
+    } else if (luong < 7000000) {
+        alert("thuế cảu bạn là 5%");
         let thue3 = luong * 5 / 100;
         alert('số tiền thuế bạn phải nộp là ' + thue3);
-    }
-else {
-    document.write('lỗi chương trình ')
+    } else {
+        document.write('lỗi chương trình ');
     }
 
 </script>
