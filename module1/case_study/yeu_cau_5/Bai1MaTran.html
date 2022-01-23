@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--tổng các số chẵn trong ma trận có kích thước m*n. Với m, n là các số nhập từ bàn phím.-->
+</body>
+<script>
+    let mang = [[1,2,3],[4,5,6],[7,8,9]]
+let tong = 0;
+    for (let i = 0; i <mang.length ; i++) {
+        for (let j = 0; j <mang[i].length ; j++) {
+            if (mang[i][j] %2 ===0){
+                tong +=mang[i][j]
+            }
+        }
+    }
+alert( "toonngr các số chẳng trong amngr 2 chiều là :"+tong)
+
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            width:50px;
+        }
+    </style>
+</head>
+<body>
+<h2>sổ số CodeGym</h2><br>
+<input>
+<input>
+<input>
+<input>
+<input>
+<input><br>
+
+<button type="button" onclick="mua()">mua vé</button>
+<button type="button" onclick="ketQua()">Xem kết quả</button>
+
+</body>
+<script>
+
+   let soCuaBan = parseInt(prompt(" nhập số có trên vé của bạn\n" +
+       "nên nhớ là tỷ lệ trúng là  0.0000001%"))
+let so = Math.random()*(999999-1)+1
+
+   if (soCuaBan===so){
+       alert(" chúc mừng bạn")
+   }else {
+       alert(" chúc bạn may mắn lần sau")
+   }
+
+</script>
+</html>

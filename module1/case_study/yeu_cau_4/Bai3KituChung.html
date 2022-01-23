@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--: Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.
+Ví dụ: s1 = "aabcc" và s2 = "adcaa",
+thì kết quả commonCharacterCount(s1, s2) = 3.
+⇨	2 xâu s1 và s2 có 3 kí tự chung: 2 kí tự 'a' và 1 kí tự 'c'.
+-->
+
+</body>
+<script>
+
+    let s1 = "abcd";
+    let s2 = "abcdaaa";
+    let s11 = s1.split('');
+    let s22 = s2.split('');
+    let dem = 0;
+    for (let i = 0; i < s11.length; i++) {
+        for (let j = 0; j < s22.length; j++) {
+            if (s11[i] === s22[j]) {
+                dem++;
+                // s22.splice(j, 1);
+                break;
+            }
+        }
+      s11[i]+=dem;
+    }
+    console.log("có " + dem + " kí tự chung ");
+
+</script>
+</html>
