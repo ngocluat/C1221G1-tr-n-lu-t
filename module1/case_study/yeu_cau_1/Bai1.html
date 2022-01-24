@@ -6,12 +6,14 @@
 </head>
 <body>
 <script>
-    for (let i = 1; i <= 4; i++) {
-        for (let j = 1; j <= 5; j++) {
-            if (i == 1 || i ==4) {
+    let chieuCao =parseInt(prompt(" nhập chiều cao"))
+    let chieuRong =parseInt(prompt(" nhập chiều rộng"))
+    for (let i = 1; i <= chieuCao; i++) {
+        for (let j = 1; j <= chieuRong; j++) {
+            if (i == 1 || i ==chieuCao) {
                 document.write('*');
             } else {
-                if (j == 1 || j == 5) {
+                if (j == 1 || j == chieuRong) {
                     document.write('*');
                 } else {
                     document.write('&nbsp;&nbsp;');

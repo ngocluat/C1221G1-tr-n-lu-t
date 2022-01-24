@@ -14,7 +14,7 @@ thì kết quả commonCharacterCount(s1, s2) = 3.
 </body>
 <script>
 
-    let s1 = "abcd";
+    let s1 = "abcdaaa";
     let s2 = "abcdaaa";
     let s11 = s1.split('');
     let s22 = s2.split('');
@@ -23,11 +23,12 @@ thì kết quả commonCharacterCount(s1, s2) = 3.
         for (let j = 0; j < s22.length; j++) {
             if (s11[i] === s22[j]) {
                 dem++;
-                // s22.splice(j, 1);
+                s11.splice(i, 1);
                 break;
             }
+
         }
-      s11[i]+=dem;
+        s11[i] += dem;
     }
     console.log("có " + dem + " kí tự chung ");
 

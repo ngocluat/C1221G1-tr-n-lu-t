@@ -8,20 +8,35 @@
 <!--Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành xâu sao cho
  trong xâu không có 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa.
   Ví dụ tRuong    TaN   HAI => Truong Tan Hai.
+
 Và một hàm tìm từ dài nhất trong 1 xâu ký tự. Hàm main sử dụng các hàm này
  để nhập xâu ký tự từ bàn phím, in ra xâu trước và sau khi chuẩn hóa,
   1 từ dài nhất trong xâu đó.
 -->
 </body>
 <script>
-    function doiTen(ten) {
-        for (let i = 0; i < ten.length; i++) {
-            let inHoa = ten.toUpperCase();
-            console.log(inHoa);
+    let ten = "             tRuoNg     Tan    hAi    ";
+    ten = ten.toLowerCase();
+    let tach = ten.split("");
+    let rong = [];
+
+    for (let i = 0; i < tach.length; i++) {
+        if (tach[i] == " " && tach[i + 1] === " ") {
+            //2 dấu cách liền nhau thì bỏ đi chỉ lấy 1
+            continue;
+        } else {
+            rong.push(tach[i]);
         }
-        if ()
     }
-    doiTen("tRuong    taN   hAI");
+    rong.pop();
+    for (let i = 0; i < rong.length; i++) {
+        if (rong[i] === " ") {
+            rong[i + 1] = rong[i + 1].toUpperCase();
+        }
+    }
+    let a = rong.join("");
+    alert(a);
+
 
 </script>
 </html>

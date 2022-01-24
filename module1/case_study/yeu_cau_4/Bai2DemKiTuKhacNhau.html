@@ -17,13 +17,13 @@ Ví dụ: s = "cabca", thì kết quả differentSymbolsNaive(s) = 3.
     let arr = s.split('');
     let dem = [];
     for (let i = 0; i < arr.length; i++) {
-      let a=  arr.indexOf(arr[i])
-        if(){
-
+        let tim = dem.indexOf(arr[i]); // kiểm tra xem biến đếm có tồn tại tron mảng Arr[i] hay không
+        if (tim === -1) {           // nếu không thấy trong mảng đem thì sẽ đẩy phần tứ và biến đếm
+            dem.push(arr[i]);
         }
+
     }
-
-
+    console.log(dem);
 
 </script>
 </html>

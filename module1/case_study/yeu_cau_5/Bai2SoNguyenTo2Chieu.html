@@ -30,11 +30,8 @@
 
     for (let i = 0; i < arr2.length; i++) {
         for (let j = 0; j < arr2[i].length; j++) {
-
-            if (kiemTraSNT(arr2[i][j])) {
-                document.write(" số nguyên tố có trong mảng là " + arr2[i][j] + '<br>');
-
-            }
+            kiemTraSNT(arr2[i][j]);
+            document.write(" số nguyên tố có trong mảng là " + arr2[i][j] + '<br>');
         }
     }
 
