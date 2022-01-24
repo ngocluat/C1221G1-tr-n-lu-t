@@ -16,14 +16,16 @@ Ví dụ: numerators = [5, 2, 5] và denominators = [6, 3, 4],
     let tu = [5, 2, 5];
     let mau = [6, 3, 4];
     let max = tu[0] / mau[0];
-    for (let i = 1; i < tu.length; i++) {
+
+    for (let i = 0; i < tu.length; i++) {
         if (max < tu[i] / mau[i]) {
             max = tu[i] / mau[i];
-            console.log("số sớn nhất đnag ở vị trí index thứ :"+i);
+            document.write(" vị trí index của phân số lớn nhất là :" + i);
         }
-    }
-    console.log(max);
 
+    }
+
+    console.log(max);
 
 </script>
 </html>
