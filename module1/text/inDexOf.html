@@ -6,12 +6,20 @@
 </head>
 <body>
 <script>
-    let  a = [1,2,3,4,5,6,7,7,8,8,8,99,9,8,7,6,5,4]
-    let b = ["a","s","so3","e","w","a","s","s","e","w","a","s","s","e","w"]
-    let tim = a.indexOf(parseInt(prompt('nhập')))
-    alert(b[tim])
+    let congCu = ["chổi", "bàn", "ghế "];
+    let chucNang = [" quét ", " ăn ", " ngồi "];
 
+    function tim(nha) {
+        let a = congCu.indexOf(nha);
+        if (a > -1) {
+            let b = chucNang[a];
+            alert(b);
+        } else {
+            alert(" không cps ");
+        }
+    }
 
+    tim(prompt("công cụ "));
 </script>
 </body>
 </html>
