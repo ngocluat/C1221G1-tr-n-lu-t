@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+</body>
+<script>
+    let q = parseInt();
+    let trungThuong = Math.round(Math.random() * (999999 - 99999) + 99999);
+
+    class SoSoCodeGym {
+        constructor(so1, so2, so3, so4) {
+            this.so1 = so1;
+            this.so2 = so2;
+            this.so3 = so3;
+            this.so4 = so4;
+        }
+
+        getSo1() {
+            return this.so1;
+        }
+
+        set(newSo1) {
+            this.ve = newSo1;
+        }
+        getSo2() {
+            return this.so2;
+        }
+
+        set(newSo2) {
+            this.ve = newSo2;
+        }
+        getSo3() {
+            return this.so3;
+        }
+
+        set(newSo3) {
+            this.ve = newSo3;
+        }
+        getSo4() {
+            return this.so4;
+        }
+
+        set(newSo4) {
+            this.ve = newSo4;
+        }
+        mua() {
+            let a = document.getElementById("1").value.innerHTML;
+            let b = document.getElementById("2").value.innerHTML;
+            let c = document.getElementById("3").value.innerHTML;
+            let d = document.getElementById("4").value.innerHTML;
+            let e = document.getElementById("5").value.innerHTML;
+            let soso = parseInt(a + b + c + d + e);
+            alert('chương trình xát nhận vé của bạn là ' + soso);
+            if (soso == trungThuong) {
+                alert("bạn đã trúng thưởng ");
+            } else {
+                alert(" chúc bạn may mắn lần sau");
+            }
+        }
+    }
+
+    let a = new SoSoCodeGym();
+    a.mua();
+
+    document.write(trungThuong);
+
+</script>
+</html>

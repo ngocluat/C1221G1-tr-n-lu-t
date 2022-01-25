@@ -9,41 +9,20 @@
  Ví dụ 1234, kết quả in ra màn hình là một hai ba bốn.-->
 
 <script>
-    let so = parseInt(prompt(" nhập số muốn đổi"));
-    switch (so) {
 
-        case 1:
-            console.log("số một");
-            break;
-        case 2:
-            console.log("số hai");
-            break;
-        case 3:
-            console.log("số ba");
-            break;
-        case 4:
-            console.log("số bốn");
-            break;
-        case 5:
-            console.log("số năm");
-            break;
-        case 6:
-            console.log("số sáu");
-            break;
-        case 7:
-            console.log("số bảy");
-            break;
-        case 8:
-            console.log("số tám");
-            break;
-        case 9:
-            console.log("số chín");
-            break;
-        case 10:
-            console.log("số mười");
-            break;
+    let so = prompt(" nhập chuổi ");
+    so = so.split("");
+    let chuSo = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let rong = [];
+    let chu = ['một', 'hai', 'ba', 'bố', 'năm', 'sáu', 'bảy', 'tám', 'chín'];
+    for (let i = 0; i < chuSo.length; i++) {
+        for (let j = 0; j < so.length; j++) {
+            if (so[j] == chuSo[i]) {
+                rong.push(chu[i]);
+            }
+        }
     }
-
+    document.write(rong);
 
 </script>
 
