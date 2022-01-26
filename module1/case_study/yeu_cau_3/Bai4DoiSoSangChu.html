@@ -10,15 +10,15 @@
 
 <script>
 
-    let so = prompt(" nhập chuổi ");
-    so = so.split("");
-    let chuSo = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let nhap = prompt(" nhập chuổi ");
+    nhap.split("");
+    let so = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     let rong = [];
     let chu = ['một', 'hai', 'ba', 'bố', 'năm', 'sáu', 'bảy', 'tám', 'chín'];
-    for (let i = 0; i < chuSo.length; i++) {
+    for (let i = 0; i < so.length; i++) {
 
-        for (let j = 0; j < so.length; j++) {
-            if (so[j] == chuSo[i]) {
+        for (let j = 0; j < nhap.length; j++) {
+            if (so[i] == nhap[j]) {
                 rong.push(chu[i]);
             }
         }

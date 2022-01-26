@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // ddesme kí tự khác nhau
+    let arr = "aababcc";
+    arr.split('');
+    let rong = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (rong.indexOf(arr[i]) == -1) {
+            rong.push(arr[i]);
+        }
+    }
+    console.log(" các kí tự khác nhau là "+rong);
+
+    //     let nhap = prompt(" nhập kí tụ bạn muốn đổi")
+    //     let so = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    //     let chu = ['một', 'hai', 'ba', 'bốn', 'năm', 'sáu', 'bảy', 'tám', 'chín'];
+    //     let rong = [];
+    //     for (let i = 0; i <so.length ; i++) {
+    //         for (let j = 0; j <nhap.length ; j++) {
+    //             if (so[i] == nhap[j]){
+    //                 rong.push(chu[i])
+    //             }
+    //         }
+    //     }
+    // document.write(rong)
+</script>
+</body>
+</html>

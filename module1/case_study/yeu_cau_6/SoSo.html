@@ -9,9 +9,10 @@
         }
     </style>
 </head>
-<body>
-
+<body background="">
+<h6>do developer còn non kém nên chỉ làm được như vậy thôi </h6>
 <h2>Xổ Số CodeGym</h2><br>
+
 <input id="1">
 <input id="2">
 <input id="3">
@@ -29,17 +30,25 @@
 <input id="11">
 <input id="12">
 <br>
+
 <button type="button" onclick="mua()">mua vé</button>
 <button type="button" onclick="ketQua()">Xem kết quả</button>
+<br>
+<br>
+<br>
+<br>
+<br>
+<button type="button" onclick="ramDom()">hệ thống ramdom</button>
 <br>
 
 
 </body>
 <script>
     let trungThuong = Math.round(Math.random() * (999999 - 99999) + 99999);
+
     class Soo {
-
-
+        constructor() {
+        }
 
         mua() {
             let a = document.getElementById("1").value;
@@ -48,27 +57,55 @@
             let d = document.getElementById("4").value;
             let e = document.getElementById("5").value;
             let f = document.getElementById("6").value;
-            let soso = parseInt(a + b + c + d + e +f);
+            let soso = (a + b + c + d + e + f);
             alert('chương trình xát nhận vé của bạn là ' + soso);
-            if (soso === trungThuong) {
-                alert("bạn đã trúng thưởng ");
+            if (soso == trungThuong) {
+                alert("       Anh trai yêu quý của tôi.\n" +
+                    "\"Dậy, dậy đi, dậy đi chứ!\" – Một giọng nói vang lên bên tai tôi. Rồi một bàn tay lạnh ngắt áp vào má tôi. Đang cuộn tròn người trong lớp chăn bông ấm áp, tôi giật mình, cáu kỉnh. \"Em đang ngủ ngon, hơn nữa hôm nay là chủ nhật.\". Anh tôi giận dữ: \"Không xem thì thôi, hoa li nở thì anh mới gọi em chứ!\". Vừa nghe thế, tôi vùng dậy, tỉnh hẳn ngủ.\n" +
+                    "\n" +
+                    "Hoa ly nở, đối với tôi đó là một sự kiện. Tôi líu ríu theo anh ra vườn, lòng ngập tràn sung sướng. Anh tôi hơn tôi những sáu tuổi. Anh giống bố, dáng cao gầy và giống mẹ ở đôi mắt đen sâu thăm thẳm. Mọi người đều khen anh đẹp trai nhưng có lần, tôi nói với anh, trông anh xấu tệ, như một con mèo mướp. Anh cười và nói rằng mèo mướp cũng có cái đẹp của nó, có điều tôi chưa nhận ra thôi.\n" +
+                    "\n" +
+                    "Ai cũng nói anh giống bố nhưng khuôn mặt của anh gọn hơn chứ không vuông vắn như bố. Nước da của anh rám nắng vì trưa hè nào anh cũng vác bóng ra sân sau chơi. Nếu ai chưa biết anh tôi thì đặc điểm dễ nhận ra anh nhất là mái tóc màu nâu bù xù, rối kinh khủng. Thỉnh thoảng, anh lại lùa tay vào trong mái tóc, gãi gãi.\n" +
+                    "\n" +
+                    "Tay chân anh dài, trông khá tương xứng với dáng người nhưng kì lạ là bàn tay anh tôi rất đẹp. Những ngón tay thon dài, bàn tay hình ô van. Anh có chiếc mũi cao và cái miệng rộng hay cười. Mỗi khi cười, chiếc răng khểnh lại nhô ra cùng hàm răng đều, sáng bóng, trông rất có duyên. Đặc biệt, mỗi khi anh cười nghe thật giòn giã và sảng khoái, vô tư.\n" +
+                    "\n" +
+                    "Bố mẹ tôi rất tự hào về học lực của anh. Ngay cả tôi, tuy ghét anh vì hay bị bắt nạt, cũng phải nể phục sức học của anh. Nói thế không có nghĩa anh là một thiên tài. Các môn anh học đều khá nhưng trội nhất vẫn là các môn khoa học tự nhiên. Chính những môn này đã đem lại nhiều vinh quang cho anh. Anh có rất nhiều bằng khen nhưng anh không bao giờ treo. Anh bảo bằng khen chả để làm gì, cái chính là tự mình phải luôn vươn lên. Những lúc nói với tôi như thế, trông anh thật già dặn, chín chắn, nghiêm túc… cứ như những người lớn.");
             } else {
                 alert(" chúc bạn may mắn lần sau");
             }
         }
-        ketQua(){
-            alert("kêt  quả sổ số là "+trungThuong);
+
+        ketQua() {
+            alert("kêt  quả sổ số là " + trungThuong);
+        }
+
+        ramDom() {
+            let heThong = Math.round(Math.random() * (999999 - 99999) + 99999);
+            alert(" hệ thống tự random vé số cho bạn là :"+heThong)
+            if(heThong==trungThuong){
+                alert("bạn là trúng thưởng rồi đó CHIA cho developer một ít nha")
+            }
+            else {
+                alert(" sai mất rồi chia buồn cùng bạn nha")
+            }
+            return heThong;
         }
     }
-    function mua( ) {
-        let aaa =new Soo
-        aaa.mua()
 
+    function mua() {
+        let mua1 = new Soo;
+        mua1.mua();
     }
-    function ketQua( ) {
-        let aaa =new Soo
-        aaa.ketQua()
 
+    function ketQua() {
+        let ketQua1 = new Soo;
+        ketQua1.ketQua();
     }
+
+    function ramDom() {
+        let ramDom1 = new Soo;
+        ramDom1.ramDom();
+    }
+
 </script>
 </html>
