@@ -9,11 +9,12 @@
     // <!--    : Viết chương trình nhập giá trị cho các phần tử của một mảng từ bàn phím (với n<10).
     // Sau đó tính tổng các số lẻ có trong mảng -->
 
-    let mang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let mangss = prompt(" nhập ")
+    let mang = mangss.split("")
     let tong = 0;
     for (let i = 0; i < mang.length; i++) {
         if (mang[i] % 2 != 0) {
-            tong += mang[i];
+            tong += parseInt(mang[i]);
         }
     }
 console.log(" tổng các số lẻ có trong mảng là "+tong)
