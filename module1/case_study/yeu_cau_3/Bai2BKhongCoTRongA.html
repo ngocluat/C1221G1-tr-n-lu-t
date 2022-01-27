@@ -13,20 +13,15 @@
 <!--thì kết quả missingValue(A, B) = [4, 6]-->
 
 <script>
-    let A = [7, 2, 5, 3, 5, 3,9];
-    let B = [7, 2, 5, 4, 6, 3, 5, 3,9];
+    let A = [7, 2, 5, 3, 5, 3, 9];
+    let B = [7, 2, 5, 4, 6, 3, 5,11,11, 3, 9];
     let C = [];
-    for (let i = 0; i <B.length ; i++) {
-        if(A.indexOf(B[i])===-1){
-            C.push(B[i])
+    for (let i = 0; i < B.length; i++) {
+        if (A.indexOf(B[i]) === -1 && C.indexOf(B[i])===-1) {
+            C.push(B[i]);
         }
     }
-document.write(C)
-
-
-
-
-
+    document.write(C);
 
 
 </script>

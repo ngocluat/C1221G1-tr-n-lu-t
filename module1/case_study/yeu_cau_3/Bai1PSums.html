@@ -14,16 +14,20 @@ Mảng b được tạo ra: [1, 1 + 2, 1 + 2 + 3] = [1, 3, 6]
 <script>
 
 
-
     let a = [1, 2, 3, 4, 5];
     let sum = 0;
     let pxSum = [];
-    for (let i = 0; i < a.length; i++) {
-        sum += a[i];
-        pxSum.push(sum);
-    }
-    document.write(pxSum);
 
+    function tinhPsSum() {
+
+        for (let i = 0; i < a.length; i++) {
+            sum = sum + a[i];
+            pxSum.push(sum);
+        }
+        document.write(pxSum);
+    }
+
+    tinhPsSum();
 </script>
 </body>
 </html>
