@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--//: Nhập từ bàn phím mảng số nguyên gồm n phần tử (n<=50).
+ Hiển thị ra màn hình danh sách các phần tử của mảng, hiện thị giá trị trung bình
+  của các phần tử chia hết cho 5 ở vị trí chia hết cho 3 ( phần tử có index chia hết cho 3)-->
+<!--Ví dụ: [15,2,3,5,10,15,7,8,9,10]. Kết quả sau khi thực hiện là: (15+5+10)/3) = 10-->
+<script>
+    let mangs = prompt(" nhập các phầm tử có trong mảng ");
+    let mang = mangs.split("");
+
+    let sum = 0;
+    for (let i = 0; i < mang.length; i++) {
+        if (mang[i] % 2 != 0) {
+            sum += parseInt(mangs[i]);
+        }
+    }
+    console.log(mang)
+    console.log("tổng" + sum);
+
+
+
+</script>
+</body>
+</html>

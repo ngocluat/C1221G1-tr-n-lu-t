@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class NganHang {
+        constructor(maTaiKhoan, tenChuTaiKhoan, tenNganHang, tongTien) {
+            this.maTaiKhoan = maTaiKhoan;
+            this.tenChuTaiKhoan = tenChuTaiKhoan;
+            this.tenNganHang = tenNganHang;
+            this.tongTien = tongTien;
+        }
+
+        getMaTaiKhoan() {
+            return this.maTaiKhoan;
+        }
+
+        setMaTaoKhoan(newMaTaiKhoan) {
+            this.maTaiKhoan = newMaTaiKhoan;
+        }
+
+        getTenChuTaiKhoan() {
+            return this.tenChuTaiKhoan;
+        }
+
+        setTenChuTaiKhoan(newTenChuTaiKhoan) {
+            this.tenChuTaiKhoan = newTenChuTaiKhoan;
+        }
+
+        getTenNganHang() {
+            return this.tenNganHang;
+        }
+
+        setTenNganHang(newMaTaiKhoan) {
+            this.maTaiKhoan = newMaTaiKhoan;
+        }
+
+        getTongTien() {
+            return this.tongTien;
+        }
+
+        setTongTien(soTienMoi) {
+            this.maTaiKhoan = soTienMoi;
+        }
+
+        toString() {
+            console.log(this.maTaiKhoan);
+            console.log(this.tenChuTaiKhoan);
+            console.log(this.tenNganHang);
+            console.log(this.tongTien);
+        }
+
+    }
+
+    let a = new NganHang("abcd", " trần ngọc luật", "vietComBank", 10000000);
+    console.log(a);
+    // phương thức lấy các thông tin của đối tượng
+    a.toString();
+    // thêm mới 1 tài khoản ngân hàng
+    let b = new NganHang("zxcv", "nguyễn thị linh", "BIDV bank", 1000000000);
+    console.log(b);
+    //  thay tên tài khoảng
+    a.setTenChuTaiKhoan(" bùi");
+    console.log(a);
+</script>
+</body>
+</html>

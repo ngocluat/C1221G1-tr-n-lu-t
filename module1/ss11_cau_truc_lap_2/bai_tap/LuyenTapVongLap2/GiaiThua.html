@@ -9,14 +9,15 @@
 
 
 <script>
-    let i;
-    let n;
+
+
     let giaiThua = 1;
-    n = prompt('nhập số giai thừ mà bạn muốn có ');
-    for (i = 1; i <= n; i++) {
+    let n = parseInt(prompt('nhập số giai thừ mà bạn muốn có '));
+    for (let i = 1; i <= n; i++) {
+
         giaiThua = giaiThua * i;
     }
-    document.write( n +"! = " + giaiThua);
+    console.log(n + "! = " + giaiThua);
 
 
 </script>
