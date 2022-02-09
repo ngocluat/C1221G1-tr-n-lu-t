@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 10.	Nhập một chuổi ký tự tuỳ ý, sau đó thực hiện công việc sau:
+    //     a. In mỗi từ trên mỗi dòng
+    // b. Đếm số từ có trong chuổi đã cho.
+    //     b. Đưa ra bảng tần số xuất hiện của các từ.
+
+    let str = "HELLO WORLD";
+    let count = 0;
+    let rong = [];
+    for (let i = 0; i < str.length; i++) {
+        // let a = str.charAt(i); // trả về ký tự trong string tương ứng với vị trí bạn truyền vào. Vị trí được tính từ 0.
+        document.write(str[i] + "<br>");
+        if (str[i] == " ") {
+            str[i].slice(i, 1);
+        } else {
+            rong.push(str[i]);
+        }
+    }
+    console.log(rong);
+    console.log(rong.length); //  đếm ssos từ t xuất hienj trog chuổi khoong tinhs daaus cach
+    //     b. Đưa ra bảng tần số xuất hiện của các từ.
+    for (let i = 0; i < rong.length; i++) {
+        let sup = rong[i];
+        let sup1 = rong[i];
+        console.log( str.split(sup).length - 1);
+    }
+</script>
+</html>

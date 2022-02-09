@@ -6,11 +6,31 @@
 </head>
 <body>
 <script>
-// <!--    7.	Tính tổng và tích các chữ số của một số nguyên dương m cho trước
-// (Ví dụ : m=234=> S=2+3+4=9, P=2*3*4=24)
-// -->
+    // <!--    7.	Tính tổng và tích các chữ số của một số nguyên dương m cho trước
+    // (Ví dụ : m=234=> S=2+3+4=9, P=2*3*4=24)
+    // -->
+    let n;
+    let flag;
+    do {
+        n = prompt('nhập độ dài chuổi ');
+        flag = parseInt(n) == n && n > 0;
+    } while (!flag);
+    n = parseInt(n);
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt(' nhập sớ phần tử thứ ' + i);
+    }
+    // let so = "234";
+    // so=so.split("");
+    let tong = 0 ;
+    let tich = 1;
+    for (let i = 0; i <arr.length ; i++) {
+        tong+= parseInt(arr[i]);
+        tich*= parseInt(arr[i]);
 
-
+    }
+console.log(" tỏng là"+tong)
+console.log("tích "+tich)
 
 </script>
 

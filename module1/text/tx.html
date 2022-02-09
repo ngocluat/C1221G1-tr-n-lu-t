@@ -12,14 +12,47 @@
     // a.sort(function (a, b) {return a - b;});
     // console.log(a);
 
-    let so = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    let chu = ['một', 'hai', 'ba', 'bố', 'năm', 'sáu', 'bày', 'tám', 'chí', 'mười'];
-    let nhap = prompt(" nhập số");
+    // let so = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    // let chu = ['một', 'hai', 'ba', 'bố', 'năm', 'sáu', 'bày', 'tám', 'chí', 'mười'];
+    // let nhap = prompt(" nhập số");
+    //
+    // for (let i = 0; i <= so.length; i++) {
+    //     if (nhap.indexOf(so[i]) != -1) {
+    //         alert('chữ là ' + chu[i]);
+    //     }
+    // }
 
-    for (let i = 0; i <= so.length; i++) {
-        if (nhap.indexOf(so[i]) != -1) {
-            alert('chữ là ' + chu[i]);
+    // let so = "tran12li34";
+    // so = so.replace(/[^0-9]/g, '');
+    // console.log(so);
+
+
+    // let i = 5;
+    // let k;
+    //
+    // i++;
+    // // i sẽ tăng lên 6;
+    //
+    // k = i--;
+    //
+    // console.log(" i" + i);//7
+    // console.log("k " + k);//6
+
+    function kiemTRa(a) {
+
+        if (a < 2) {
+            alert(" không pải số nguyên tố ");
+        } else {
+            for (let i = 2; i < a; i++) {
+                if (a % i == 0) {
+                    alert(" không phải là sso guyên tố ");
+                    break;
+                } else {
+                    alert(" là số nguyên tố ");
+                }
+            }
         }
     }
+    kiemTRa(parseInt(prompt("nhập")))
 </script>
 </html>

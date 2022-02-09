@@ -5,6 +5,7 @@
     <title>sữ dụng máy tính</title>
 </head>
 <body>
+<p id="hienThi"></p>
 <p> <b> caculator</b></p>
 <input type="number" id="o1">
 <input type="number" id ="o2"> <br>
@@ -19,7 +20,8 @@ function tinhToan1() {
 let so1 = parseInt(document.getElementById('o1').value );
 let so2 = parseInt(document.getElementById('o2').value);
 let tong = so1+so2;
-document.write( 'result division '+tong)
+document.getElementById("hienThi").innerHTML=tong
+// document.write( 'result division '+tong)
 }
 function tinhToan2() {
 let so1 = parseInt(document.getElementById('o1').value);

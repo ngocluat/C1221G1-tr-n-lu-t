@@ -10,18 +10,21 @@
     // nhạp giá trị cho mảng 10
     // hiện thì mảng ra:  10
     //            // xử lý
-    let n;
-    let flag;
-    do {
-        n = prompt('nhập độ dài chuổi ');
-        flag = parseInt(n) == n && n > 0;
-    } while (!flag);
-    n = parseInt(n);
-    let arr = new Array(n);
-    for (let i = 0; i < arr.length; i++) {
-        arr[i] = prompt(' nhập sớ phần tử thứ ' + i);
-    }
-    document.write(arr);
+      let n;
+      let flag;
+      do {
+          n = prompt('nhập độ dài chuổi ');
+          flag = parseInt(n) == n && n > 0;
+      } while (!flag);
+      n = parseInt(n);
+      let arr = Array(n);
+      for (let i = 0; i < arr.length; i++) {
+          arr[i] = prompt(' nhập sớ phần tử thứ ' + (i+1));
+      }
+    console.log(arr);
+
+
+
 
 </script>
 </body>

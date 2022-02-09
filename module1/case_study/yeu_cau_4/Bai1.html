@@ -15,13 +15,16 @@ Và một hàm tìm từ dài nhất trong 1 xâu ký tự. Hàm main sử dụn
 -->
 </body>
 <script>
-    let ten = "             tRuoNg     Tan    hAi    ";
+    let ten =prompt(" nhập tên của bạn");
     ten = ten.toLowerCase();
     let tach = ten.split("");
     let rong = [];
 
     for (let i = 0; i < tach.length; i++) {
-        if (tach[i] == " " && tach[i + 1] === " ") {
+        if ( tach[0] ){
+            tach[0] = tach[0].toUpperCase();
+        }
+        if (tach[i] === " " && tach[i + 1] === " ") {
             //2 dấu cách liền nhau thì bỏ đi chỉ lấy 1
             continue;
         } else {
