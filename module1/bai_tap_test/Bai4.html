@@ -47,10 +47,7 @@
         }
 
         toString() {
-            console.log(this.maTaiKhoan);
-            console.log(this.tenChuTaiKhoan);
-            console.log(this.tenNganHang);
-            console.log(this.tongTien);
+            return 'số tài khoản ' + this.maTaiKhoan + '' + this.tenChuTaiKhoan + '' + this.tenNganHang + " " + this.tongTien;
         }
 
     }
@@ -58,7 +55,7 @@
     let a = new NganHang("abcd", " trần ngọc luật", "vietComBank", 10000000);
     console.log(a);
     // phương thức lấy các thông tin của đối tượng
-    a.toString();
+    alert(a.toString());
     // thêm mới 1 tài khoản ng1ân hàng
     let b = new NganHang("zxcv", "nguyễn thị linh", "BIDV bank", 1000000000);
     console.log(b);
