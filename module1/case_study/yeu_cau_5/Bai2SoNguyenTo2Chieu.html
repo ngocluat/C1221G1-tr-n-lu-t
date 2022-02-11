@@ -14,29 +14,30 @@
     function kiemTraSNT(soTuNhien) {
         let flag = true;
         if (soTuNhien < 2) {
-            flag = true;
+            flag = false;
         } else {
             for (let i = 2; i < soTuNhien; i++) {
                 if (soTuNhien % i == 0) {
                     flag = false;
                     break;
+                } else {
+                    flag = true;
                 }
             }
         }
         return flag;
     }
 
-    let arr2 = [[1, 2, 3], [4, 5, 6], [7, 8, 10]];
-
+    let arr2 = [[3, 2, 3], [4, 5, 6], [7, 8, 10]];
+    let rong = [];
     for (let i = 0; i < arr2.length; i++) {
         for (let j = 0; j < arr2[i].length; j++) {
             if (kiemTraSNT(arr2[i][j])) {
-
-                document.write(" các số nguyên tố có rong mảng 2 chiều là :" + arr2[i][j] + '<br>');
+                rong.push(arr2[i][j]);
             }
         }
     }
-
+    console.log(rong);
 
 </script>
 

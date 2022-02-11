@@ -6,26 +6,49 @@
 </head>
 <body>
 <script>
-    class Circle {
-        constructor() {
-            this.radius;
+    class HinhTron {
+        constructor(banKinh) {
+            this.banKinh = banKinh;
         }
 
-        getRadius() {
-            return radius;
+        getBanKinh() {
+            return this.banKinh;
         }
 
-        getArea() {
-            return Math.PI * radius * radius;
+        setBanKinh(newBanKinh) {
+            this.banKinh = newBanKinh;
         }
 
+        chuVi() {
+            return Math.PI * (2 * this.banKinh);
+        }
     }
 
-    let circle = new Circle(2);
-    let radius = circle.getRadius();
+    let a = new HinhTron(2);
+    let hienThiChuVi = a.chuVi();
+    alert(" chu vi của hình tròn là" + hienThiChuVi);
 
-    let area = circle.getArea();
-    alert("radius: " + radius + "; area: " + area);
+
+    // class Circle {
+    //     constructor(radius) {
+    //         this.radius = radius;
+    //     }
+    //
+    //     getRadius() {
+    //         return radius;
+    //     }
+    //
+    //     getArea() {
+    //         return Math.PI * (2 * radius);
+    //     }
+    //
+    // }
+    // let circle = new Circle(2);
+    //
+    // let radius = circle.getRadius();
+    //
+    // let area = circle.getArea();
+    // alert("radius: " + radius + "; area: " + area);
 
 </script>
 </body>

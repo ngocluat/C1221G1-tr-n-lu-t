@@ -8,14 +8,14 @@
 <canvas id="myCanvas" width="500" height="500"></canvas>
 </body>
 <script>
-<!-- tất cả là mặt địn chỉ cần thay  phuownggthuecs  thôi-->
+    <!-- tất cả là mặt địn chỉ cần thay  phuownggthuecs  thôi-->
     let c = document.getElementById("myCanvas");
     // định dạng vẽ 2d
     let ctx = c.getContext("2d");
     // Set lại cài đặt mặc định cho nét vẽ khi vẽ.
     ctx.beginPath();
     // phuowng thuwusc vẽ
-    ctx.arc(100,100,100,50,100)
+    ctx.arc(100, 100, 120, 50, 100 * Math.PI);
     // màu
     ctx.strokeStyle = "red";
     // ra mang hình

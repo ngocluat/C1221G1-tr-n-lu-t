@@ -11,23 +11,35 @@ thì hàm sẽ trả về 1 cụm từ viết tắt là lấy các ký tự đ�
 <!--Ví dụ:   object     Oriented     programming => kết quả trả về :OOP-->
 <!-- -	Nếu Chuỗi chỉ có duy nhất 1 từ thì kết quả trả về là 1 thông báo
 "Chuỗi chỉ có 1 từ nên không cần viết tắc"-->
+
 <script>
-    function kiemtra(arr) {
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] === " ") {
-                let a = arr[i + 1].toUpperCase();
-                document.write(a);
+
+    function kiemTra(arr) {
+        let vietTat = [];
+        arr = arr.trim();
+        arr = arr.toUpperCase();
+        let myArr = arr.split(" ");
+
+        if (myArr.length > 1) {
+            for (let i = 0; i < myArr.length; i++) {
+                if (myArr[i] != "") {
+                    vietTat.push(myArr[i].charAt(0));
+                }
             }
+        } else {
+            alert("chuổi chỉ có 1 từ nên không cần viết hoa");
         }
-        arr = arr.split(" ");
-        if (arr.length == 1) {
-            alert("Chuỗi chỉ có 1 từ nên không cần viết tắc");
-        }
+        return vietTat;
+
     }
 
-    kiemtra("  trần      ngọc      luật");
+
+    let tuVietTat = kiemTra("    tran     ngoc   Luat    ");
+    let a = tuVietTat.join("");
+    document.write(a);
 
 
 </script>
+
 </body>
 </html>

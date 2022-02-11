@@ -12,45 +12,67 @@ số này đã làm bài tập ở jame). Hàm trả về 1 mảng số fibonaci
 <script>
 
 
+    let soFibonnacciTrongArr = [];
 
-
-    let soDau = 0;
-    let soCuoi = 1;
-    let soFibonaci = 0;
-    let so = prompt('bạn muốn có bao nhiêu số fibonacci');
-    let rong = [];
-    let result = [];
-    for (let i = 0; i < so; i++) {
-
-        if (i <= 1) {
-            soFibonaci = i;
-            rong.push(i);
-        } else {
+    function find_sum(max) {
+        let fiBonnacciArr = [];
+        let soDau = 0;
+        let soCuoi = 1;
+        let soFibonaci = 0;
+        while (soFibonaci <= max) {
+            fiBonnacciArr.push(soFibonaci);
             soFibonaci = soDau + soCuoi;
             soDau = soCuoi;
             soCuoi = soFibonaci;
         }
-        rong.push(soFibonaci);
-
+        return fiBonnacciArr;
     }
-    console.log(rong);
 
-    function kiemTra(arr) {
-        for (let j = 0; j < rong.length; j++) {
-            for (let k = 0; k < arr.length; k++) {
-                if (arr[k] == rong[j]) {
-                    result.push(arr[k]);
-                }
+    function max(arr) {
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+
             }
         }
-        console.log(result);
+        return max;
     }
 
 
-    result.sort(function(a, b){return a - b});
+    let array = [1, 5, 6, 13, 1, 12, 18, 0, 5, 1, 89];
+
+    let a = max(array);// a là max của mảng
+
+    let b = find_sum(a);// b là tìm tất cả đến số lớn nhất có trong mảng
+
+    for (let i = 0; i < array.length; i++) {
+        if (b.indexOf(array[i]) != -1) {
+            soFibonnacciTrongArr.push(array[i]);
+
+        }
+    }
+    soFibonnacciTrongArr = soFibonnacciTrongArr.sort(function (a, b) {
+        return a - b;
+
+    });
+    console.log(soFibonnacciTrongArr);
 
 
-    kiemTra([54, 2, 3, 34, 5, 6, 7, 8, 9, 10, 13,14,21]);
+
+
+
+    //     // không cho lặp lại
+    //     let trong = [];
+    //     for (let i = 0; i < a.length; i++) {
+    //         if (trong.indexOf(a[i]) == -1) {
+    //             trong.push(a[i]);
+    //         }
+    //     }
+    //     console.log(trong);
+
+
+    // kiemTra([1, 5, 6, 13, 1, 12, 18, 0, 5, 1]);
 
 </script>
 </body>

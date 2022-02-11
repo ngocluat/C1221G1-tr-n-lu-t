@@ -30,8 +30,10 @@
         }
     }
 
-    let a = new XayDungLopMoTaHinhChuNhat(140, 160);
-    document.write("diên tích hình chư nhật là " + a.dienTich() + 'px');
+    let chieuDai = parseInt(prompt(" nhập chiều dài"));
+    let chieuRong = parseInt(prompt(" nhập chiều rộng"));
+    let a = new XayDungLopMoTaHinhChuNhat(chieuDai, chieuRong);
+    document.write("diên tích hình chư nhật là " + a.dienTich());
 
 
 </script>

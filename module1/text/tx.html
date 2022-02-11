@@ -38,21 +38,38 @@
     // console.log(" i" + i);//7
     // console.log("k " + k);//6
 
-    function kiemTRa(a) {
+    // function kiemTRa(a) {
+    //
+    //     if (a < 2) {
+    //         alert(" không pải số nguyên tố ");
+    //     } else {
+    //         for (let i = 2; i < a; i++) {
+    //             if (a % i == 0) {
+    //                 alert(" không phải là sso guyên tố ");
+    //                 break;
+    //             } else {
+    //                 alert(" là số nguyên tố ");
+    //             }
+    //         }
+    //     }
+    // }
+    // kiemTRa(parseInt(prompt("nhập")))
 
-        if (a < 2) {
-            alert(" không pải số nguyên tố ");
+    let a = "tran";
+    a.split("");
+    let b = "tranxxx";
+    b.split("");
+    let rong = [];
+    let giong = [];
+    for (let i = 0; i < b.length; i++) {
+        if (rong.indexOf(b[i] == -1) && a.indexOf(b[i]) == -1) {
+            rong.push(b[i]);
         } else {
-            for (let i = 2; i < a; i++) {
-                if (a % i == 0) {
-                    alert(" không phải là sso guyên tố ");
-                    break;
-                } else {
-                    alert(" là số nguyên tố ");
-                }
-            }
+            giong.push(b[i]);
         }
     }
-    kiemTRa(parseInt(prompt("nhập")))
+
+    console.log(rong);
+    console.log(giong);
 </script>
 </html>

@@ -12,20 +12,28 @@
     let n = parseInt(prompt("nhập vào số cột"));
     let matrix = [];
     let total = 0;
+    // for (let i = 0; i < m; i++) {
+    //     let row = [];
+    //     for (let j = 0; j < n; j++) {
+    //         row[j] = parseInt(prompt("nhập số vào ma trận"));
+    //     }
+    //     matrix[i] = row; //hỏi
+    // }
+
     for (let i = 0; i < m; i++) {
-        let row = [];
+        matrix[i] = new Array();
         for (let j = 0; j < n; j++) {
-            row[j] = parseInt(prompt("nhập số vào ma trận"));
-        }
-        matrix[i] = row;
-    }
-    for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; j++) {
-            if (matrix[i][j] % 2 == 0) {
-                total += matrix[i][j];
-            }
+            matrix[i][j] = parseInt(prompt("nhập phần tử ở hàng "+i+" cột "+j+" vào ma trận"));
         }
     }
+
+    // for (let i = 0; i < matrix.length; i++) {
+    //     for (let j = 0; j < matrix[i].length; j++) {
+    //         if (matrix[i][j] % 2 == 0) {
+    //             total += matrix[i][j];
+    //         }
+    //     }
+    // }
     console.table(matrix);
     alert(" tổng các số cẵng trong ma trận là " + total);
 

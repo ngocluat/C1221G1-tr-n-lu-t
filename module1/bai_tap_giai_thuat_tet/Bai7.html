@@ -15,6 +15,7 @@
         n = prompt('nhập độ dài chuổi ');
         flag = parseInt(n) == n && n > 0;
     } while (!flag);
+
     n = parseInt(n);
     let arr = new Array(n);
     for (let i = 0; i < arr.length; i++) {
@@ -22,15 +23,15 @@
     }
     // let so = "234";
     // so=so.split("");
-    let tong = 0 ;
+    let tong = 0;
     let tich = 1;
-    for (let i = 0; i <arr.length ; i++) {
-        tong+= parseInt(arr[i]);
-        tich*= parseInt(arr[i]);
+    for (let i = 0; i < arr.length; i++) {
+        tong += parseInt(arr[i]);
+        tich *= parseInt(arr[i]);
 
     }
-console.log(" tỏng là"+tong)
-console.log("tích "+tich)
+    console.log(" tỏng là" + tong);
+    console.log("tích " + tich);
 
 </script>
 

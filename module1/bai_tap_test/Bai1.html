@@ -10,17 +10,30 @@
   của các phần tử chia hết cho 5 ở vị trí chia hết cho 3 ( phần tử có index chia hết cho 3)-->
 <!--Ví dụ: [15,2,3,5,10,15,7,8,9,10]. Kết quả sau khi thực hiện là: (15+5+10)/3) = 10-->
 <script>
-    let mangs = prompt(" nhập các phầm tử có trong mảng ");
-    let mang = mangs.split("");
 
+
+    let n;
+    let flag;
     let sum = 0;
-    for (let i = 0; i < mang.length; i++) {
-        if (mang[i] % 2 != 0) {
-            sum += parseInt(mangs[i]);
+    let count = 0;
+    do {
+        n = prompt('nhập độ dài mảng ');
+        flag = parseInt(n) == n && n<=50;
+    } while (!flag);
+    n = parseInt(n);
+    let arr = Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt(' nhập sớ phần tử thứ ' + (i + 1));
+    }
+    console.log(arr);
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 5 == 0 && i % 3 == 0) {
+            sum += parseInt(arr[i]);
+            count++;
         }
     }
-    console.log(mang)
-    console.log("tổng" + sum);
+    console.log(sum / count);
+
 
 
 
