@@ -19,62 +19,52 @@
 <p id="ketQua"></p>
 <script>
     class NganHang {
-        constructor(maTaiKhoang, tenChuTaiKhoang, tenNganHang,tongTien) {
+        constructor(maTaiKhoang, tenChuTaiKhoang, tenNganHang, tongTien) {
             this.maTaiKhoang = maTaiKhoang;
             this.tenChuTaiKhoang = tenChuTaiKhoang;
             this.tenNganHang = tenNganHang;
-            this.tongTien=tongTien
+            this.tongTien = tongTien;
         }
-
         setMaTaiKhoang(newMaTaiKhoang) {
             this.maTaiKhoang = newMaTaiKhoang;
         }
-
         getMaTaiKhoang() {
             return this.maTaiKhoang;
         }
-
         setTenChuTaiKhoang(tenChuTaiKhoang) {
             this.tenChuTaiKhoang = tenChuTaiKhoang;
         }
-
         getTenChuTaiKhoang() {
             return this.tenChuTaiKhoang;
         }
-
         setTenNganHang(tenNganHang) {
             this.tenNganHang = tenNganHang;
         }
-
         getTenNganHang() {
             return this.tenNganHang;
         }
-
         setTongTien(tongTien) {
             this.tongTien = tongTien;
         }
-
         getTongTien() {
             return this.tongTien;
         }
-
         toString() {
-            return "mã tài khoản :" +   this.maTaiKhoang  + " tên chủ tài khoảng :" +   this.tenChuTaiKhoang+ " tên ngân hàng :" +  this.tenNganHang + "tổng tiền :"+ this.tongTien;
+            return "mã tài khoản :" + this.maTaiKhoang + " tên chủ tài khoảng :" + this.tenChuTaiKhoang + " tên ngân hàng :" + this.tenNganHang + "tổng tiền :" + this.tongTien;
         }
     }
 
-    let taiKhoang = new NganHang("xxxx", "Nguyễn Văn A", "BIDV Bank",10000000);
+    let taiKhoang = new NganHang("xxxx", "Nguyễn Văn A", "BIDV Bank", 10000000);
 
     let danhSachNganHang = [taiKhoang];
     hienThi(danhSachNganHang);
-
 
     function themMoi() {
         let maTaiKhoang = document.getElementById("maTaiKhoang").value;
         let tenChuTaiKhoang = document.getElementById("tenChuTaiKhoang").value;
         let tenNganHang = document.getElementById("tenNganHang").value;
         let tongTien = document.getElementById("tongTien").value;
-        let taikhoanNganHangMoi = new NganHang(maTaiKhoang, tenChuTaiKhoang, tenNganHang,tongTien);
+        let taikhoanNganHangMoi = new NganHang(maTaiKhoang, tenChuTaiKhoang, tenNganHang, tongTien);
         danhSachNganHang.push(taikhoanNganHangMoi);
         hienThi(danhSachNganHang);
         document.getElementById("maTaiKhoang").value = "";
@@ -82,6 +72,7 @@
         document.getElementById("tenNganHang").value = "";
         document.getElementById("tongTien").value = "";
     }
+
     function hienThi(danhSach) {
         let bang = '<table border="1" style="border-collapse: collapse">\n' +
             '    <tr>\n' +
@@ -97,9 +88,9 @@
                 '        <td>' + danhSach[i].getTenNganHang() + '</td>\n' +
                 '        <td>' + danhSach[i].getTongTien() + '</td>\n' +
                 '       \n' +
-                '    </tr>'
+                '    </tr>';
         }
-        bang += '</table>'
+        bang += '</table>';
         document.getElementById("ketQua").innerHTML = bang;
     }
 
