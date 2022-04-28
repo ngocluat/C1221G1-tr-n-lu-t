@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // let n;
+    // let flag;
+    // let tong = 0;
+    // do {
+    //     n = prompt('nhập độ dài chuổi ');
+    //     flag = parseInt(n) == n && n > 0;
+    // } while (!flag);
+    // n = parseInt(n);
+    // let arr = new Array(n);
+    // for (let i = 0; i < arr.length; i++) {
+    //     arr[i] = prompt(' nhập sớ phần tử thứ ' + (i+1));
+    // }
+    // console.log(arr);
+
+    function maxMinAvg(arr) {
+        let arrMaxMinAvg = [];
+        let max = arr[0];
+        let min = arr[0];
+        let avg = 0;
+        let count = 0;
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            count++;
+            if (arr[i] > max) {
+                max = arr[i];
+            } else if (arr[i] < min) {
+                min = arr[i];
+            }
+            sum += arr[i];
+        }
+        arrMaxMinAvg.push(max);
+        arrMaxMinAvg.push(min);
+        arrMaxMinAvg.push(sum / count);
+        return arrMaxMinAvg;
+    }
+    let a = maxMinAvg([1, 5, 10, -2]);
+    console.log(a);
+
+
+    function swap(arr) {
+        let arrnew = [];
+        let a = arr[0]
+        for (let i = 0; i < arr.length; i++) {
+            arr[0] = arr[arr.length - 1];
+
+            arr[arr.length - 1] = a;
+            arrnew.push(arr[i]);
+        }
+
+        return arrnew;
+    }
+
+   let aa = swap([1, 5, 10, -2]);
+    console.log(aa)
+</script>
+</html>

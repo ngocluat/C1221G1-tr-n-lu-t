@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    let soDau = 0;
+    let soCuoi = 1;
+    let soFibonaci = 0;
+    let so = prompt('bạn muốn có bao nhiêu số fibonacci');
+    let rong = [];
+    let result = [];
+    for (let i = 0; i < so; i++) {
+        if (i <= 1) {
+            soFibonaci = i;
+            rong.push(i);
+        } else {
+            soFibonaci = soDau + soCuoi;
+            soDau = soCuoi;
+            soCuoi = soFibonaci;
+        }
+        rong.push(soFibonaci);
+
+    }
+    console.log(rong);
+
+    function kiemTra(arr) {
+        for (let j = 0; j < rong.length; j++) {
+            for (let k = 0; k < arr.length; k++) {
+                if (arr[k] == rong[j]) {
+                    result.push(arr[k]);
+                }
+            }
+        }
+        console.log(result);
+    }
+
+    result.sort(function (a, b) {
+        return a - b;
+    });
+    kiemTra([54, 2, 3, 34, 5, 6, 7, 8, 9, 10, 13, 14, 21]);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm giữa kỳ, điểm cuối kỳ</title>
+</head>
+<body>
+<script>
+    let diemKiemTra = parseInt(prompt(' nhập điểm kiểm tra của bạn'));
+    let diemGiuaKi = parseInt(prompt(' nhập điểm giưã kì của bạn'));
+    let diemCuoiKi = parseInt(prompt(' nhập điểm cuối kì của bạn'));
+    let hocLuc = (diemKiemTra+(diemGiuaKi*2)+(diemCuoiKi*3))/6
+    if (hocLuc>8 ){
+        alert('loại giỏi');
+    }
+    else if (hocLuc>7){
+        alert('loại khá');
+    }
+    else if(hocLuc>3){
+        alert('trung bình');
+    }
+    else {
+        alert('tại sao bạn tệ như vậy!! cố lên chứ!!.');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2.</title>
+</head>
+<body>
+<!--Phương trình bậc 2 là phương trình có dạng: ax² +bx + c = 0. (a≠0)-->
+<!--Đầu tiên tính delta = b² – 4ac
+Nếu delta < 0 thì kết luận vô nghiệm
+Nếu delta = 0 thì có nghiệm kép
+Nếu delta > 0 thì sẽ có 2 nghiệm phân biệt-->
+
+<script>
+    let a = parseInt(prompt('nhập a'));
+    let b = parseInt(prompt('nhập b'));
+    let c = parseInt(prompt('nhập c'));
+    let delta = (b*b)-(4*a*c);
+    if (delta < 0 ){
+        document.write('phương trình vô nghiệm');
+    }
+   else if (delta == 0 ){
+        document.write('phương trình có nghiệm kép');
+        document.write( ' nghiệm của phuong trình là X1 = x2 = '+ -b/2*a );
+    }
+    else { delta >0
+        document.write('phương trình có 2 nghiệm phân biệt');
+        document.write(   'x1 = ' +(-b + delta) / (2*a) );
+        document.write(' x2 = '+ (-b - delta) / (2*a));
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let uoc1 = [];
+    let uoc2 = [];
+    let tongUoc1 = 0;
+    let tongUoc2 = 0;
+
+    function kiemTra(so1, so2) {
+        for (let i = 0; i < so1; i++) {
+            if (so1 % i == 0) {
+                uoc1.push(i);
+                tongUoc1 += i;
+            }
+        }
+        for (let i = 0; i < so2; i++) {
+            if (so2 % i == 0) {
+                uoc2.push(i);
+                tongUoc2 += i;
+            }
+        }
+        if (so1 == tongUoc2 && so2 == tongUoc1) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+    let so1 = parseInt(prompt(" nhập số 1 "));
+    let so2 = parseInt(prompt(" nhập số 2 "));
+    let goiHamKiemTra = kiemTra(so1, so2);
+
+    if (goiHamKiemTra) {
+        alert(" hai số này là sso thân thiết ");
+    } else {
+        alert(" hai số này không phải là 1 cặp số thân thiết ");
+    }
+</script>
+</html>

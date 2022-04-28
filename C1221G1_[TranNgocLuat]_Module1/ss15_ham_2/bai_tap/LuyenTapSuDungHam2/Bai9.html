@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết hàm truyền vào một mảng ký tự,
+    // và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    // Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+
+
+    let mang = [1, 2, 3, 1, 5, 6, 'd', 'd', 'f'];
+    let kiTu = prompt('nhập ');
+    let count = 0;
+
+    function kiemTra(mang, kiTu) {
+        for (let i = 0; i < mang.length; i++) {
+            if (kiTu == mang[i]) {
+                count++;
+            }
+        }
+        if (count != 0) {
+            return count;
+        } else {
+            return -1;
+        }
+    }
+
+    let result = kiemTra(mang, kiTu);
+    if (result == -1) {
+        alert('không tìm thấy ');
+    } else {
+        alert(count);
+    }
+</script>
+</body>
+</html>

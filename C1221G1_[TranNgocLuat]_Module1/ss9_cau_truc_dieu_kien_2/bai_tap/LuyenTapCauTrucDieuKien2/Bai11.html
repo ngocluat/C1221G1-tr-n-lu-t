@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính thuế thu nhập cá nhân.</title>
+</head>
+<body>
+
+
+<!-- 0 Đến 5 triệu đồng (trđ)=5%-->
+<!--Trên 5 trđ – 10 tr=đ10%-->
+<!-- trên 10 trđ=  15%-->
+<!--Trên 18 trđ – 32 trđ= 20%-->
+<!-- trên 20 tr thì nập 30% thuế-->
+
+
+
+<script>
+let luong = parseInt(prompt('nhập số tiền lương của bạn'));
+if (luong <5000000 ){
+    document.write('bạn phai nộp 5% thuế là : ' + luong*  +'đồng');
+}
+else if (luong < 10000000 ){
+    document.write('bạn phai nộp 10% thuế là : ' + luong* 10/100 +'đồng');
+}
+else if (luong < 15000000 ){
+    document.write('bạn phai nộp 15% thuế là : ' + luong* 15 /100 +'đồng');
+}else if (luong < 20000000 ){
+    document.write('bạn phai nộp 20% thuế là : ' + luong* 20 /100 +'đồng');
+}else {
+    document.write(' bạn phải nộp thế là '  + luong* 30 /100 +'đồng');
+}
+</script>
+
+
+<!-- làm button-->
+<!--tất cả thuế được tính từ 10% của lương-->
+<!--<h2> thu nhập được tính bằng triệu </h2> <br>-->
+<!--nhập lương của bạn-->
+<!-- <input type="number" value="000000" id="tien">-->
+<!--<button type="button" onclick="tinh()">Click để tính thuế</button>-->
+<!--<p id="money"> tiền thuế </p>-->
+<!--<script>-->
+<!--    function tinh() {-->
+<!--        let a = parseInt(document.getElementById = "tien".value);-->
+<!--        let b = tien * 10 / 100;-->
+<!--        document.write(b)-->
+<!--    }-->
+<!--</script>-->
+
+</body>
+</html>

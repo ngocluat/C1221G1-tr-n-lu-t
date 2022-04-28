@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap" placeholder="Nhập tên sản phẩm">
+<input type="button" value="Add New Product" onclick="themSamPham()"><br>
+<span> Số lượng sản phẩm : </span> <span id="soLuong"></span>
+<p id="display"></p>
+<script>
+    // CRUD:
+    // + Create : thêm mới
+    // + Read : hiện thị
+    // + Update: Chỉnh sửa thông tin
+    // + Delete: Xóa
+    let lietKeSanPham = ["Sam Sung", "Nokia", "Iphone"];
+
+    display(lietKeSanPham);
+
+    function themSamPham() {
+        let newName = document.getElementById("nhap").value;
+        if (newName!=""){
+            lietKeSanPham.push(newName);
+        }else {
+            alert("Cần nhập tên sản phẩm")
+        }
+
+        document.getElementById("nhap").value="";
+        display(lietKeSanPham);
+
+    }
+    function display(list) {
+        let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+            '<tr>\n' +
+            '<th>STT</th>\n' +
+            '<th>Name</th>\n' +
+            '<th>Edit</th>\n' +
+            '<th>Delete</th>\n' +
+            '</tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableString += '<tr>\n' +
+                '<td>' + (i + 1) + '</td>\n' +
+                '<td>' + list[i] + '</td>\n' +
+                '<td><input type="button" value="edit" onclick="editProduct('+i+')"></td>\n' +
+                '<td><input type="button" value="delete" onclick="deleteProduct('+i+')"></td>\n' +
+                '</tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("display").innerHTML = tableString;
+        document.getElementById("soLuong").innerText = list.length;
+    }
+    function deleteProduct(index) {
+        let conf= confirm("Bạn có muốn xóa sản phẩm "+lietKeSanPham[index]);
+        if (conf){
+            lietKeSanPham.splice(index,1); // xóa 1 sp tại vì trí index
+        }else {
+            alert("Bạn đã không xóa ");
+        }
+
+        display(lietKeSanPham);
+    }
+    function editProduct(index) {
+        let editName = prompt("Nhập tên bạn muốn sửa: ");
+        if (editName!=null && editName!=""){ //null =>ok
+            lietKeSanPham[index] =editName;
+        }
+        display(lietKeSanPham);
+
+    }
+</script>
+</body>
+</html>

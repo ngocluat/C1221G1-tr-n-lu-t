@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class DientThoai{
+        constructor() {
+            this.pin=100;
+            this.trangThai=true; // đang bật
+            this.vungSoanTin="";
+            this.vungTinDaGui=[];
+            this.vungTinDen=[];
+        }
+        getTrangThai(){
+            return this.trangThai;
+        }
+        batTat(){
+            this.trangThai = !this.trangThai;
+        }
+        sacPin(){
+            if (this.pin<10){
+                this.pin=100;
+            }
+        }
+        soanTinNhan(message){
+            if (this.pin<=10){
+                alert("Diện thoại cần phải sạc");
+            }else {
+                if (this.getTrangThai()){
+                    this.pin--;
+                    this.vungSoanTin =message;
+                }
+            }
+
+
+        }
+        nhanTinNhan( message){
+            this.pin--
+            this.vungTinDen.push(message);
+        }
+        guiTinNhan(dientThoai,message){
+            this.soanTinNhan(message);
+            this.vungTinDaGui.push(this.vungSoanTin);
+            this.vungSoanTin="";
+            dientThoai.nhanTinNhan(this.vungTinDaGui[this.vungTinDaGui.length-1]);
+        }
+        hienThiHopThuDen(){
+            for (let i = 0; i <this.vungTinDen.length ; i++) {
+                console.log((i+1) +"."+ this.vungTinDen[i]);
+            }
+
+        }
+
+    }
+
+    //
+    let iphone = new DientThoai();
+    let nokia = new DientThoai();
+    iphone.guiTinNhan(nokia,"Hello nokia");
+    nokia.hienThiHopThuDen();
+    nokia.guiTinNhan(iphone,"Hello Iphone tôi đã nhận được tin nhắn");
+    iphone.hienThiHopThuDen();
+    iphone.batTat();
+    iphone.guiTinNhan(nokia,"Bạn khỏe không nokia");
+    nokia.hienThiHopThuDen();
+    iphone.nhanTinNhan(" nhận tin")
+    iphone.nhanTinNhan(" nhận tin")
+    iphone.nhanTinNhan(" nhận tin")
+    iphone.nhanTinNhan(" nhận tin")
+    alert(iphone.pin)
+
+
+</script>
+</body>
+</html>

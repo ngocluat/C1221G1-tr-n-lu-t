@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // <!--    : Viết chương trình nhập giá trị cho các phần tử của một mảng từ bàn phím (với n<10).
+    // Sau đó tính tổng các số lẻ có trong mảng -->
+    let n;
+    let flag;
+    let tong = 0;
+    do {
+        n = prompt('nhập độ dài chuổi ');
+        flag = parseInt(n) == n && n > 0;
+    } while (!flag);
+    n = parseInt(n);
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt(' nhập sớ phần tử thứ ' + (i+1));
+    }
+    console.log(arr);
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 != 0) {
+            tong += parseInt(arr[i]);
+        }
+    }
+    console.log(" tổng các số lẻ có trong mảng là " + tong);
+
+</script>
+</body>
+</html>

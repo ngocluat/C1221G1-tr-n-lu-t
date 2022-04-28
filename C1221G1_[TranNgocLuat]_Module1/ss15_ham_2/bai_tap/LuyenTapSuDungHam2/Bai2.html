@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Viết hàm tính diện, hàm tính chu vi hình tròn. Call Medium built-in được xây dựng-->
+<script>
+    // dieenj tich = Rbinhf * 3.14
+    function dientich(banKinh) {
+        let S = banKinh * 2 * 3.14;
+        return S;
+    }
+
+    let dt = dientich(parseInt(prompt('nhập bán kính..Cm để tính diện tích ')));
+    alert(' diện tích hình tròn là ' + dt + 'Cm');
+
+
+    function chuVi(banKinh2) {
+        let V = 2 * banKinh2 * 3.14;
+        return V;
+    }
+
+    let cv = chuVi(parseInt(prompt('nhạp bán kính hình tròn để tính chu vi')));
+    alert('chu vi của hình tròn là' + cv);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let h = parseInt(prompt(" nhập chiều cao"));
+    for (let i = 0; i <= h; i++) {
+        for (let j = h; j > i; j--) {
+            document.write("&nbsp;&nbsp");
+        }
+        for (let k = 1; k <= i * 2 - 1; k++) {
+            document.write("*");
+        }
+        document.write('<br>');
+    }
+</script>
+</body>
+</html>

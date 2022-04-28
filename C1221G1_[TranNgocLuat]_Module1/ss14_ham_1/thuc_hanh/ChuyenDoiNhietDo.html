@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>type a value in the fahrenheit field to conver the value celcius</p> <br>
+fahrennheit
+<input type="number" id="NhapDoF"
+       oninput="nhap(this.value)"
+       onchange="nhap(this.value)">
+<p>Celsius: <span id="HienDoC"></span></p>
+<script>
+    function nhap(valNum) {
+        valNum = parseInt(valNum);
+        document.getElementById('HienDoC').innerHTML = (valNum - 32) / 1.8;
+    }
+
+</script>
+
+
+<hr>
+<hr>
+
+<!--<p> thực hành chuyển đởi nhieeth độ</p>-->
+<!--<input type="number" id="doF"-->
+<!--oninput="nhap(this.value)"-->
+<!--onchange="nhap(this.value)">-->
+<!--<p>Celsius: <span id="hien"></span></p>-->
+<!--<script>-->
+<!--    function nhap(ten) {-->
+<!--ten=parseInt(ten);-->
+<!--document.getElementById('hien').innerHTML=(ten-32)/1.8-->
+<!--    }-->
+
+
+<!--</script>-->
+
+</body>
+</html>

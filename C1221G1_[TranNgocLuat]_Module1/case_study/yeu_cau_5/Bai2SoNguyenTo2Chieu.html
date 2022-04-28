@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều,
+ đếm các số nguyên tố có trong mảng đó.-->
+</body>
+<script>
+
+
+    function kiemTraSNT(soTuNhien) {
+        let flag = true;
+        if (soTuNhien < 2) {
+            flag = false;
+        } else {
+            for (let i = 2; i < soTuNhien; i++) {
+                if (soTuNhien % i == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        return flag;
+    }
+
+    let arr2 = [[3, 2, 3], [4, 5, 6], [7, 8, 10]];
+    let rong = [];
+    for (let i = 0; i < arr2.length; i++) {
+        for (let j = 0; j < arr2[i].length; j++) {
+            if (kiemTraSNT(arr2[i][j])) {
+                rong.push(arr2[i][j]);
+            }
+        }
+    }
+    console.log(rong);
+
+</script>
+
+
+</html>

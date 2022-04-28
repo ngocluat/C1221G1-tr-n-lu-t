@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài :  khai báo 1 mảng gồm n phần tử với n là số nguyên <20 :  5 điểm
+    // nhạp giá trị cho mảng 10
+    // hiện thì mảng ra:  10
+    //            // xử lý
+    let n;
+    let flag;
+    do {
+        //kiểm tra điều kiện
+        n = prompt('nhập độ dài chuổi ');
+        flag = parseInt(n) == n && n > 0;
+    } while (!flag);
+    n = parseInt(n);
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt(' nhập sớ phần tử thứ ' + (i + 1));
+    }
+    console.log(arr);
+
+    function kiemTraSNT(soTuNhien) {
+        let flag = true;
+        if (soTuNhien < 2) {
+            flag = false;
+        } else {
+            for (let i = 2; i < soTuNhien; i++) {
+                if (soTuNhien % i == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        return flag;
+    }
+    let soNguyenTo = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (kiemTraSNT(arr[i])) {
+            soNguyenTo.push(arr[i]);
+        }
+    }
+    console.log(soNguyenTo);
+</script>
+</body>
+</html>

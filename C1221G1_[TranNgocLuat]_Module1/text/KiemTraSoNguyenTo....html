@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function kiemTraSNT(soTuNhien) {
+        let flag =true;
+        if (soTuNhien < 2) {
+            flag =false;
+        } else {
+            for (let i = 2; i < soTuNhien; i++) {
+                if (soTuNhien % i == 0) {
+                    flag =false;
+                    break;
+                }
+            }
+        }
+        return flag;
+    }
+    // kiểm tra một số có phải là số nguyên tố hay không?
+    let num = prompt("nhập vào 1 số cần kiểm tra");
+    if (kiemTraSNT(num)){
+        alert(num + " là số nguyên tố")
+    }else {
+        alert(num+ " không phải là ố nguyên tố")
+    }
+
+    // Tìm số nguyên tố có trong một mảng?
+    let array = [1,2,3,4,5,6,7,8,11];
+    let result =[];
+    for (let i = 0; i <array.length ; i++) {
+        if (kiemTraSNT(array[i])){
+            result.push(array[i]);
+        }
+    }
+    alert("Cacs số nguyên tố có trong mảng " +result)
+    // tính tổng các số nguyên tố có trong mảng 2 chiều
+    let arr2 = [[1,2,3],[2,3,4],[7,8,9]];
+    let sum=0;
+    for (let i = 0; i <arr2.length ; i++) {
+        for (let j = 0; j <arr2[i].length ; j++) {
+            if (kiemTraSNT(arr2[i][j])){
+                sum+=arr2[i][j]
+            }
+        }
+    }
+    alert("tổng ác snt có trong mảng 2 chiều" + sum);
+
+</script>
+</body>
+</html>

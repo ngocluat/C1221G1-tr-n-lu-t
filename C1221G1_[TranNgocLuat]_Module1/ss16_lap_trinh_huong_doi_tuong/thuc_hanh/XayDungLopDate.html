@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class LopDate {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        //get là lấy ra
+        getDay() {
+            return this.day;
+        }
+
+        getMonth() {
+            return this.month;
+        }
+
+        getYear() {
+            return this.year;
+        }
+
+        //set là sửa lại
+        // setDay(newDay) {
+        //     this.day = newDay;
+        // }
+
+        //sửa ngày
+        setDay(newDay) {
+            this.day = newDay;
+        }
+
+        // sửa năm
+        setYear(newYear) {
+            this.year = newYear;
+        }
+
+    }
+
+    let a = new LopDate(18, 8, 2003);
+    // lấy ngày ra
+    console.log(a.getDay());
+    // sửa lại ngày
+    a.setDay(23);
+    console.log(a.getDay());
+    //sửa lại năm
+    a.setYear(9999);
+    console.log(a.getYear());
+    //    lấy ra ngày
+    let ngay = a.getDay();
+    console.log(ngay);
+    //   lấy ra tháng
+    let thang = a.getMonth();
+    console.log(thang);
+    //   lấy ra năm
+    let nam = a.getYear();
+    a.setDay(88);
+    ngay = a.getDay();
+    console.log(ngay);
+    // sửa lại năm
+    a.setYear(2022);
+    nam = a.getYear();
+    //in ra cả dảy ngày tháng năm
+    console.log(nam);
+</script>
+
+
+</body>
+</html>

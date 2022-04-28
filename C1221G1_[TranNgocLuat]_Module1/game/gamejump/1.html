@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- jumping Game part-3 -->
+<!-- press up key to jump -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumping Game (Part-3)</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        #container {
+
+            width: 100%;
+            height: 100%;
+            position: relative;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.445);
+            overflow: hidden;
+
+
+        }
+
+        #sky {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -5;
+            background: url(sky.png);
+        }
+
+        #cloud {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url(cloud_sprite.png);
+            animation: cloud-move 60s linear infinite;
+            z-index: -4;
+        }
+
+        #rock2 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            animation: rock-move 20s linear infinite;
+
+            background: url(rock2.png)
+        }
+
+        #rock1 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            animation: rock-move 20s linear infinite;
+            background-image: url(rock1.png);
+        }
+
+
+        @keyframes cloud-move {
+            0% {
+                background-position: 7680px;
+            }
+
+            100% {
+                background-position: 0px;
+            }
+
+        }
+
+        @keyframes rock-move {
+            0% {
+                background-position: 3840px;
+                transform: translateY(0px);
+
+            }
+
+            50% {
+                transform: translateY(50px);
+            }
+
+            100% {
+                background-position: 0px;
+                transform: translateY(0px);
+
+            }
+
+        }
+
+        #container::before {
+            content: '';
+            position: absolute;
+            Width: 100%;
+            height: 100%;
+            opacity: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.486));
+            animation: background-animation 30s linear alternate infinite;
+            z-index: -3;
+
+        }
+
+
+        @keyframes background-animation {
+            0% {
+                opacity: 0;
+            }
+
+            47% {
+                opacity: 0;
+            }
+
+            53% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        #scoreBox {
+            font-size: 30px;
+            font-family: cursive;
+
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            padding: 30px 0px;
+            color: black;
+            font-weight: bold;
+
+        }
+
+        #score {
+            width: 150px;
+            text-align: left;
+            margin-left: 5px;
+            font-size: 25px;
+            margin-top: 1px;
+
+
+        }
+
+        span {
+            z-index: 3;
+        }
+
+        #character-box {
+            height: 256px;
+            width: 256px;
+            position: absolute;
+            left: 100px;
+            bottom: 50px;
+
+        }
+
+        #character {
+            width: 100%;
+            height: 100%;
+            background: url(character.png);
+            animation: character-animate 1s steps(6) infinite;
+        }
+
+        #block {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(0 149 255);
+            border: 2px solid black;
+            position: absolute;
+            bottom: 50px;
+            left: 900px;
+            animation: block-animate 1.5s linear forwards infinite;
+        }
+
+
+        #road {
+            width: 100%;
+            height: 50px;
+            background-image: linear-gradient(#db1717, #440707);
+            position: absolute;
+            bottom: 0px;
+        }
+
+        .jump {
+            animation: character-box-jump .7s linear;
+        }
+
+        @keyframes character-animate {
+            0% {
+                background-position: 1536px;
+
+            }
+
+            100% {
+                background-position: 0px;
+
+            }
+
+        }
+
+        @keyframes character-box-jump {
+            0% {
+                bottom: 50px;
+
+            }
+
+            30% {
+                bottom: 300px;
+
+            }
+
+            70% {
+                bottom: 300px;
+            }
+
+            100% {
+                bottom: 50px;
+
+            }
+
+        }
+
+
+        @keyframes block-animate {
+            0% {
+                left: 1300px;
+
+            }
+
+            100% {
+                left: -200px;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+<div id="container">
+    <div id="sky"></div>
+    <div id="cloud">
+
+    </div>
+
+    <div id="rock2">
+
+    </div>
+    <div id="rock1">
+
+    </div>
+
+
+    <div id="scoreBox"><span> Score : </span> <span id='score'>0</span></div>
+    <div id="character-box">
+        <div id="character"></div>
+    </div>
+    <div id="block"></div>
+    <div id="road"></div>
+</div>
+
+<script>
+    const characterBox = document.getElementById('character-box');
+    const block = document.getElementById('block');
+    const character = document.getElementById('character');
+
+
+    let gameover = new Audio('gameover.wav');
+    let music = new Audio('music.mp3');
+    let jumpMusic = new Audio('jump.wav');
+
+    let score = document.getElementById('score');
+    let scoreIncrease = 0;
+
+    let cloud = document.getElementById('cloud');
+    let rock1 = document.getElementById('rock1');
+    let rock2 = document.getElementById('rock2');
+
+    music.loop = true;
+    music.play();
+    music.volume = 0.5;
+
+    document.addEventListener('keydown', jump);
+
+
+    function jump(e) {
+
+        if (e.keyCode == 38) {
+            if (characterBox.classList == 'jump') {
+                return;
+            }
+            characterBox.classList.add('jump');
+            jumpMusic.play();
+
+            setTimeout(() => {
+                characterBox.classList.remove('jump');
+                jumpMusic.paused();
+                jumpMusic.currentTime = 0;
+
+
+            }, 700);
+        }
+
+    }
+
+    let flag = 1;
+    let scoreFlag = 1;
+
+    function check() {
+
+        let blockleft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
+        let characterbottom = parseInt(window.getComputedStyle(characterBox).getPropertyValue('bottom'));
+
+        if (blockleft > 30 && blockleft < 336 && characterbottom <= 150) {
+
+            music.pause();
+            block.style.animationPlayState = 'paused';
+            character.style.animationPlayState = 'paused';
+            characterBox.style.animationPlayState = 'paused';
+            cloud.style.animationPlayState = 'paused';
+            rock1.style.animationPlayState = 'paused';
+            rock2.style.animationPlayState = 'paused';
+            jumpMusic.muted = true;
+            scoreFlag = 0;
+            if (flag == 1) {
+                gameover.play();
+                flag++;
+            }
+
+
+        } else {
+
+            if (scoreFlag == 1) {
+
+                scoreIncrease++;
+            }
+            score.innerHTML = scoreIncrease;
+        }
+
+
+    }
+
+    setInterval(() => {
+        check();
+
+    }, 10);
+</script>
+</body>
+
+</html>

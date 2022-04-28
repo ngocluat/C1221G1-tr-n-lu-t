@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Animal{
+        constructor(name, weight, speed) {
+            this.name= name;
+            this.weight =weight;
+            this.speed =speed;
+        }
+        say(text){
+            console.log(text);
+        }
+    }
+    class Rat extends Animal{
+        constructor(name, weight, speed, status) {
+            super(name, weight, speed);
+            this.status =status;
+        }
+        say(text) {
+            console.log("chuột kếu : "+ text)
+        }
+    }
+    class Cat extends Animal{
+        constructor(name, weight, speed) {
+            super(name, weight, speed);
+        }
+        say(text) {
+            console.log("Meo kếu "+ text);
+        }
+        eatMouse(rat){
+            if (rat.status=='song'){
+                this.say("ngon quá");
+                this.weight +=rat.weight;
+            }else {
+                this.say("chết rồi ko ăn")
+            }
+        }
+        catchMouse(rat){
+            if (this.speed>rat.speed){
+                this.say(" Bắt được rồi");
+                this.eatMouse(rat);
+            }else {
+                rat.say("Đố bắt được đó?");
+            }
+        }
+    }
+
+    // viết chuưng trình
+    let jerry1 = new Rat("Jerry",2,5,'song');
+    let jerry2 = new Rat("Jerry",2,20,'song');
+
+    let tom = new Cat("Tom",10,10);
+    let array = [jerry1,jerry2]
+    for (let jerry of array) {
+        tom.catchMouse(jerry);
+    }
+    console.log("trong lương của mèo là : "+ tom.weight);
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Doi {
+        constructor(doC, doF, doK) {
+            this.doC = doC;
+            this.doF = doF;
+            this.doK = doK;
+        }
+
+
+        getDoC() {
+            return this.doC;
+        }
+
+        setDoC(value) {
+            this.doC = value;
+        }
+
+        getDoF() {
+            return this.doF;
+        }
+
+        setDoF(value) {
+            this.doF = value;
+        }
+
+        getDoK() {
+            return this.doK;
+        }
+
+        setDoK(value) {
+            this.doK = value;
+        }
+
+        getdoidoF() {
+            return this.doC * 9/5 + 32;
+        }
+
+        getdoidoK() {
+            return this.doC + 273.15;
+        }
+
+    }
+
+    let ketQua = new Doi(100);
+    document.write(ketQua.getdoidoF());
+    document.write(ketQua.getdoidoK());
+</script>
+</body>
+</html>

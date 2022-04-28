@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.-->
+</body>
+<script>
+
+
+    function doaViTri(a, b) {
+        let mang = [];
+        mang.push(a);
+        mang.push(b);
+        mang.reverse();
+        return mang;
+    }
+
+    let ketQua = doaViTri(parseInt(prompt(' nhập số 1')), parseInt(prompt(' nhập ssos 2')));
+    alert('kết quả sau khi đảo ngược là ' + ketQua);
+
+
+</script>
+</html>

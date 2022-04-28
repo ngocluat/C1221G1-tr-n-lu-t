@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ.
+ Ví dụ 1234, kết quả in ra màn hình là một hai ba bốn.-->
+
+<script>
+
+    let nhapChuoi = prompt(" nhập chuổi ");
+    nhapChuoi.split("");
+    let daySo = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let rong = [];
+    let chu = ['một', 'hai', 'ba', 'bốn', 'năm', 'sáu', 'bảy', 'tám', 'chín'];
+    for (let j = 0; j < nhapChuoi.length; j++) {
+        for (let i = 0; i < daySo.length; i++) {
+            if (daySo[i] == nhapChuoi[j]) {
+                rong.push(chu[i]);
+            }
+        }
+
+    }
+    document.write(rong);
+
+</script>
+
+
+</body>
+</html>

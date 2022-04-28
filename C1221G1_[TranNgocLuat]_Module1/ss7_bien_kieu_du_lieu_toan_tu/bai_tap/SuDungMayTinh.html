@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sữ dụng máy tính</title>
+</head>
+<body>
+<p id="hienThi"></p>
+<p> <b> caculator</b></p>
+<input type="number" id="o1">
+<input type="number" id ="o2"> <br>
+<button type="button" value="+" onclick="tinhToan1()">addtion(+)</button>
+<button type="button" value="-" onclick="tinhToan2()">subtraction(-)</button>
+<button type="button" value="*" onclick="tinhToan3()">mutiplitayion(*)</button>
+<button type="button" value="/" onclick="tinhToan4()">division(/)</button> <br>
+
+result: <p id="result"></p>
+<script>
+function tinhToan1() {
+let so1 = parseInt(document.getElementById('o1').value );
+let so2 = parseInt(document.getElementById('o2').value);
+let tong = so1+so2;
+document.getElementById("hienThi").innerHTML=tong
+// document.write( 'result division '+tong)
+}
+function tinhToan2() {
+let so1 = parseInt(document.getElementById('o1').value);
+let so2 = parseInt(document.getElementById('o2').value);
+let tong = so1-so2
+    document.write('result division '+tong)
+}
+function tinhToan3() {
+let so1= parseInt(document.getElementById('o1').value);
+let so2 = parseInt(document.getElementById('o2').value);
+let tong = so1 * so2;
+document.write('result division '+ tong)
+}
+function tinhToan4() {
+let so1 = parseInt(document.getElementById('o1').value);
+let so2 = parseInt(document.getElementById('o2').value);
+let tong = so1 / so2;
+document.write("result division" + tong)
+}
+</script>
+</body>
+</html>

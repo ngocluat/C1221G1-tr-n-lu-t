@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--: Viết hàm có tham số truyền vào là một chuỗi các ký tự.Hàm thực hiện tạo ra một cụm từ viết tắt-->
+<!-- -	Nếu chuỗi có nhiều hơn hoặc bằng 2 từ trở lên
+thì hàm sẽ trả về 1 cụm từ viết tắt là lấy các ký tự đầu tiên của từng từ và đổi sang in hoa.-->
+<!--Ví dụ:   object     Oriented     programming => kết quả trả về :OOP-->
+<!-- -	Nếu Chuỗi chỉ có duy nhất 1 từ thì kết quả trả về là 1 thông báo
+"Chuỗi chỉ có 1 từ nên không cần viết tắc"-->
+
+<script>
+    function kiemTra(arr) {
+        let vietTat = [];
+        arr = arr.trim();
+        console.log(arr);
+        arr = arr.toUpperCase();
+        let myArr = arr.split(" ");
+
+        if (myArr.length > 1) {
+            for (let i = 0; i < myArr.length; i++) {
+                if (myArr[i] != "") {
+                    let tuVietHoa = myArr[i].charAt(0);
+                    vietTat.push(tuVietHoa);
+                }
+            }
+        } else {
+            alert("chuổi chỉ có 1 từ nên không cần viết hoa");
+        }
+        return vietTat;
+
+    }
+
+    let nhapTen = prompt(" nhập tên");
+    let tuVietTat = kiemTra(nhapTen);
+    tuVietTat = tuVietTat.join("");
+    alert(tuVietTat);
+
+
+</script>
+
+</body>
+</html>

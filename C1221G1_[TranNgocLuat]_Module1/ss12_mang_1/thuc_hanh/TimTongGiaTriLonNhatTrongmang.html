@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [1, 2, 4, 125, 6, 72, 9, 3];
+    let max = number[0];
+    let index = 0;
+    for (let i = 1; i < number.length; i++) {    //length là đọ dài của mảng
+        if (number[i] > max)  {
+            max = number[i];
+            index=i ;
+        }
+    }
+    alert("max: " + max + "ở vị trí " + number.indexOf(max));
+</script>
+</body>
+</html>

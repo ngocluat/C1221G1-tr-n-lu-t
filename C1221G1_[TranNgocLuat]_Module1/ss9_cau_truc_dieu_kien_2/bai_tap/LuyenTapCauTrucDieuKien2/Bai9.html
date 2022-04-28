@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:
+
+        a,b,c > 0
+        a + b > c
+        b + c > a
+        a + c > b </title>
+</head>
+<body>
+<h3 id="triangle">  </h3>
+<script>
+let a = parseInt(prompt('nhập cạnh a'));
+let b = parseInt(prompt('nhập cạnh b'));
+let c = parseInt(prompt('nhập cạnh c'));
+if (a>0 && b>0 && c>0){
+    document.write(' độ dài ba cạnh'+a , b , c +'là cạnh của tam giác')
+}
+else if(a+b >c){
+    document.write(' độ dài ba cạnh'+a , b , c +'là cạnh của tam giác')
+}
+else if(a+c >b){
+    document.write(' độ dài ba cạnh'+a , b , c +'là cạnh của tam giác')
+}
+else if(a+c >a){
+    document.write(' độ dài ba cạnh'+a , b , c +'là cạnh của tam giác')
+}
+else {
+    document.write('3 cạnh bạn nhập khộng phải là 3 cạnh của tam giác rồi !! vui lòng nhập lại')
+}
+
+
+</script>
+</body>
+</html>

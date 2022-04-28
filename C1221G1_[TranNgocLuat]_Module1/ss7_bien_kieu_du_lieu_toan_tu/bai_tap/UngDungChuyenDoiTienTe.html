@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng chuyển đổi tienf tệ</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th><b> Amount </b></th>
+        <th><b> from curency</b></th>
+        <th><b> To curency</b>
+    </tr>
+    <tr>
+        <td><input type="number" id="amount"></td>
+        <td><select id = "first">
+            <option value="VND"> VND</option>
+            <option value="USD"> USD</option>
+        </select></td>
+        <td><select id = "second">
+            <option value="VND"> VND</option>
+            <option value="USD"> USD</option>
+        </select></td>
+
+    </tr>
+
+</table>
+
+tiền quy đổi : <p id="result"></p>
+
+<button onclick="chuyenDoiTienTe()">convert</button>
+
+
+<script>
+    function chuyenDoiTienTe() {
+
+        let currencyAmount = document.getElementById("amount").value;
+        document.getElementById("result").innerHTML = currencyAmount * 23000;
+
+        let first = document.getElementById("first").value;
+        let sencond = document.getElementById("second").value;
+
+        if (first == 'USD' & second == 'VND' ) {
+            document.getElementById("test").innerHTML = currencyAmount*23000;
+        } else if (first = 'VND' & second == 'USD' ) {
+            document.getElementById("test").innerHTML = currencyAmount/23000;
+        } else {
+            document.getElementById("test").innerHTML = currencyAmount;
+        }
+
+    }
+</script>
+
+</body>
+</html>

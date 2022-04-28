@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let n;
+    let flag;
+    do {
+        n = prompt('nhập độ dài mảng ');
+        flag = parseInt(n) == n && n <= 50;
+    } while (!flag);// nếu lớn hơn 50 và là chử chì bắt nhập lại
+
+    n = parseInt(n);
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = parseInt(prompt(' nhập sớ phần tử thứ ' + (i + 1)));
+    }
+
+    console.log(arr);
+    let sum = 0;
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 != 0 && i % 2 == 0) {
+            sum += arr[i];
+            count++;
+        }
+    }
+    let avg = sum / count;
+    alert('trung bình côngj các số lẻ ở vị trí chẵn là ' + avg);
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Tính tổng của 20 số đầu tiên trong dãy fibonacci.-->
+
+
+<script>
+
+    let soDau = 0;
+    let soCuoi = 1;
+    let soFibonnacci;
+    let sum = 0;
+    let so = prompt(' bạn muốn cố bap nhiêu số ffionacci được cộng')
+    for (let i = 0; i <= so; i++) {
+        if (i <= 1) {
+            soFibonnacci = i;
+
+        } else {
+            soFibonnacci = soDau + soCuoi;
+            soDau = soCuoi;
+            soCuoi = soFibonnacci;
+        }
+        document.write(soFibonnacci);
+        document.write('<br>');
+        sum = sum + soFibonnacci;
+
+    }
+    document.write('tông của các số fibonacci là :'+sum)
+
+
+</script>
+</body>
+</html>

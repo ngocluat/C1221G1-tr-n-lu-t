@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="maSoSach" placeholder="mã số sách">
+<input type="text" id="tenSach" placeholder="tên sách ">
+<input type="number" id="namXuatBan" placeholder="năm xuất bản">
+<input type="number" id="soQuyen" placeholder="số quyển ">
+<input type="" id="tinhTrang" placeholder="tình trạng">
+<input type="button" id="themMoi" value="Thêm mới " onclick="themMoi()">
+<p id="ketQua"></p>
+<script>
+    class QuanLySach {
+        constructor(maSoSach, tenSach, namXuatBan, soQuyen, tinhTrang) {
+            this.maSoSach = maSoSach;
+            this.tenSach = tenSach;
+            this.namXuatBan = namXuatBan;
+            this.soQuyen = soQuyen;
+            this.tinhTrang = tinhTrang;
+        }
+
+        setMaSoSach(newMaSoSach) {
+            this.maSoSach = newMaSoSach;
+        }
+
+        getMaSoSach() {
+            return this.maSoSach;
+        }
+
+        setTenSach(newTenSach) {
+            this.tenSach = newTenSach;
+        }
+
+        getTenSach() {
+            return this.tenSach;
+        }
+
+        setNamXuatBan(newNamXuatBan) {
+            this.namXuatBan = newNamXuatBan;
+        }
+
+        getNamXuatBan() {
+            return this.namXuatBan;
+        }
+
+        setSoQuyen(soQuyenMoi) {
+            this.soQuyen = soQuyenMoi;
+        }
+
+        getSoQuyen() {
+            return this.soQuyen;
+        }
+
+        setTinhTrang(tinhTrang1) {
+            this.tinhTrang = tinhTrang1;
+        }
+
+        getTinhTrang() {
+            if (this.tinhTrang > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    let sach1 = new QuanLySach(123, "cẩm nang sống", 2020, "100", true);
+    let sach2 = new QuanLySach(222, "cẩm nang sống", 2011, "100", true);
+    let sach3 = new QuanLySach(2222, "cẩm nang sống", 1991, "100", false);
+
+    let danhSachXach = [sach1, sach2, sach3];
+    hienThi(danhSachXach);
+
+    function themMoi() {
+        let maSoSach = document.getElementById("maSoSach").value;
+        let tenSach = document.getElementById("tenSach").value;
+        let namXuatBan = document.getElementById("namXuatBan").value;
+        let soQuyen = document.getElementById("soQuyen").value;
+        let tinhTrang = document.getElementById("tinhTrang").value;
+        let danhSachMoi1 = new QuanLySach(maSoSach, tenSach, namXuatBan, soQuyen, tinhTrang);
+        danhSachXach.push(danhSachMoi1);
+        hienThi(danhSachXach);
+        document.getElementById("maSoSach").value = "";
+        document.getElementById("tenSach").value = "";
+        document.getElementById("namXuatBan").value = "";
+        document.getElementById("soQuyen").value = "";
+        document.getElementById("tinhTrang").value = "";
+    }
+
+    function hienThi(danhSach) {
+        let bang = '<table border="1" style="border-collapse: collapse">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>mã số sách</th>\n' +
+            '        <th>tên sách </th>\n' +
+            '        <th>năm xuất bản</th>\n' +
+            '        <th>số quyển </th>\n' +
+            '        <th>tình trạng</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < danhSach.length; i++) {
+            bang += ' <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + danhSach[i].getMaSoSach() + '</td>\n' +
+                '        <td>' + danhSach[i].getTenSach() + '</td>\n' +
+                '        <td>' + danhSach[i].getNamXuatBan() + '</td>\n' +
+                '        <td>' + danhSach[i].getSoQuyen() + '</td>\n' +
+                '        <td>' + danhSach[i].getTinhTrang() + '</td>\n' +
+                '       \n' +
+                '    </tr>';
+        }
+        bang += '</table>';
+        document.getElementById("ketQua").innerHTML = bang;
+    }
+</script>
+</body>
+</html>

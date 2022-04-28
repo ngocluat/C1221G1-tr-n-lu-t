@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm có tham số truyền vào là một mảng ,tìm các số fibonaci có trong mảng(
+số này đã làm bài tập ở jame). Hàm trả về 1 mảng số fibonaci được tìm thấy trong mảng
+( Yêu cầu sắp xếp tăng dần).-->
+<!--Gợi ý đây là dãy số fibonaci: 0,1,1,2,3,5,8,13,21,…..-->
+<script>
+
+
+    // tìm max trong mảng để kiểm tra tới số lớn nhất vó trong mảng ;
+    function max(arr) {
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+
+            }
+        }
+        return max;
+    }
+
+    // hàm tìm số fibonnacci
+    function find_sum(soLonNhat) {
+        let fiBonnacciArr = [];
+        let soDau = 0;
+        let soCuoi = 1;
+        let soFibonaci = 0;
+
+        for (let i = 0; i <= soLonNhat; i++) {
+            fiBonnacciArr.push(soFibonaci);
+            soFibonaci = soDau + soCuoi;
+            soDau = soCuoi;
+            soCuoi = soFibonaci;
+            if (soFibonaci > maxCuaArray) {
+                break;
+            }
+        }
+        return fiBonnacciArr;
+    }
+
+    let array = [1, 5, 6, 13, 1, 12, 18, 0, 5, 1, 89, 2581];
+    let maxCuaArray = max(array);
+    let timFibonnaci = find_sum(maxCuaArray);
+    console.log(timFibonnaci);
+
+    let soFibonnacciTrongArr = [];
+    for (let i = 0; i < array.length; i++) {
+        if (timFibonnaci.indexOf(array[i]) != -1) {
+            soFibonnacciTrongArr.push(array[i]);
+        }
+    }
+    soFibonnacciTrongArr = soFibonnacciTrongArr.sort(function (a, b) {
+        return a - b;
+
+    });
+
+
+    // không cho lặp lại
+    let trong = [];
+    for (let i = 0; i < soFibonnacciTrongArr.length; i++) {
+        if (trong.indexOf(soFibonnacciTrongArr[i]) == -1) {
+            trong.push(soFibonnacciTrongArr[i]);
+        }
+    }
+    console.log(trong);
+
+
+</script>
+</body>
+</html>

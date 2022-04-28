@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 10;
+    for (let i = 1; i <= a; i++) {
+        for (let k = a; k > i; k--) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let j = 1; j <= i * 2 - 1; j++) {
+            if (i == 1 || i == a || j == 1 || j == i * 2 - 1) {
+                document.write("*");
+            } else {
+                document.write("&nbsp;&nbsp;");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

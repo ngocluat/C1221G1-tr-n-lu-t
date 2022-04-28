@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap">
+<button type="button" onclick="kiemTra()">kiểm tra</button>
+<p id="displayArray"></p>
+<script>
+
+
+    //     let  mang = ["a","w"];
+    // let  inputText;
+    // function kiemTra() {
+    //     inputText = document.getElementById("nhap");
+    //     mang.push(inputText.value);
+    //     document.getElementById("displayArray").innerHTML = mang;
+    // }
+
+
+    // let a = [1,2,4,5,6,7,11,2,33]
+    //  a=a.sort(function (a, b) {return(a -b)})
+    // console.log(a)
+
+    // đế kí tự khhacs nhau cs trong mảng
+    // ví dụ như có 1 chử r
+
+    let ten = "tranngocluatr";
+    ten = ten.split("");
+
+    let rong = [];
+    let countR = 0;
+    let timR = [];
+    let trungNhau = [];
+    for (let i = 0; i <= ten.length; i++) {
+        if (rong.indexOf(ten[i]) == -1) {
+            rong.push(ten[i]);
+        }
+        if (ten[i] == "r" || ten[i] == "R") {
+            countR++;
+            timR.push(ten[i]);
+        }
+        //tìm kí tự kgiiongs nhau
+        if (trungNhau.indexOf(ten[i]) == -1) {
+            trungNhau.push(ten[i]);
+        }
+    }
+    console.log(timR);
+    console.log(" các kí tự khác nhau trong chuổi " + rong);
+    alert(countR);
+document.write(trungNhau);
+
+
+    // tìm các kí tự khc nhau trong 2 chuổi
+    let a = "tranluat";
+    a = a.split("");
+    let b = "tran";
+    b = b.split("");
+    let m = [];
+    for (let i = 0; i < a.length; i++) {
+        if (m.indexOf(a[i]) == -1 && b.indexOf(a[i]) == -1) {
+            m.push(a[i]);
+        }
+    }
+    console.log(" các ki tụ khaccs nhau trong 2 chuổi là " + m);
+
+
+</script>
+</body>
+</html>
